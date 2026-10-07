@@ -1,0 +1,23 @@
+# Rebuilt inside the image
+/vendor
+
+# Never ship node_modules; Vite output in public/build IS committed and shipped
+/node_modules
+
+# Secrets & local-only
+.env
+.env.*
+!.env.example
+
+# Local/dev noise
+/.git
+/.github
+/tests
+/storage/*.key
+/storage/logs/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+npm-debug.log
+yarn-error.log
+.DS_Store
