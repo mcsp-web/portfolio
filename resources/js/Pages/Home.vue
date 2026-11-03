@@ -13,6 +13,11 @@ const props = defineProps({
 });
 
 const upworkMode = computed(() => usePage().props.upworkMode);
+const market = computed(() =>
+    usePage().props.marketplace === 'fiverr'
+        ? { name: 'Fiverr', url: props.profile.fiverr_url }
+        : { name: 'Upwork', url: props.profile.upwork_url },
+);
 const filter = ref('all');
 const visible = computed(() => (filter.value === 'all' ? props.projects : props.projects.filter((p) => p.category === filter.value)));
 const featured = computed(() => visible.value.filter((p) => p.isFeatured));
@@ -182,9 +187,9 @@ const approach = [
             <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8">
                 <h2 class="display max-w-3xl text-4xl font-bold text-balance sm:text-6xl">Have something to build? Tell me about it.</h2>
                 <template v-if="upworkMode">
-                    <p class="mt-5 max-w-xl text-lg text-muted">Send me a message on Upwork with what you're building and your timeline. I reply within one business day.</p>
+                    <p class="mt-5 max-w-xl text-lg text-muted">Send me a message on {{ market.name }} with what you're building and your timeline. I reply within one business day.</p>
                     <div class="mt-10 flex flex-wrap items-center gap-4">
-                        <a v-if="profile.upwork_url" :href="profile.upwork_url" target="_blank" rel="noopener" class="display rounded-full bg-teal px-7 py-4 text-lg font-bold text-ink hover:bg-aqua">Message me on Upwork</a>
+                        <a v-if="market.url" :href="market.url" target="_blank" rel="noopener" class="display rounded-full bg-teal px-7 py-4 text-lg font-bold text-ink hover:bg-aqua">Message me on {{ market.name }}</a>
                     </div>
                 </template>
                 <template v-else>

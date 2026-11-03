@@ -7,7 +7,7 @@ const form = useForm({ ...props.settings });
 const fields = [
     ['name', 'Your name'], ['company', 'Business name'], ['headline', 'Headline', 'The big line at the top of the home page.'],
     ['availability', 'Availability badge', 'Leave empty to hide it.'], ['location', 'Location'], ['email', 'Contact email'],
-    ['upwork_url', 'Upwork profile URL'], ['linkedin_url', 'LinkedIn URL'], ['github_url', 'GitHub URL'], ['website_url', 'Business website'],
+    ['upwork_url', 'Upwork profile URL'], ['fiverr_url', 'Fiverr profile URL'], ['linkedin_url', 'LinkedIn URL'], ['github_url', 'GitHub URL'], ['website_url', 'Business website'],
 ];
 </script>
 

@@ -28,6 +28,7 @@ class SettingsController extends Controller
             'location' => ['nullable', 'string', 'max:80'],
             'email' => ['required', 'email', 'max:120'],
             'upwork_url' => ['nullable', 'url', 'max:255'],
+            'fiverr_url' => ['nullable', 'url', 'max:255'],
             'linkedin_url' => ['nullable', 'url', 'max:255'],
             'github_url' => ['nullable', 'url', 'max:255'],
             'website_url' => ['nullable', 'url', 'max:255'],

@@ -96,6 +96,10 @@ class PublicPortfolioTest extends TestCase
             ->where('profile.email', '')
             ->where('project.liveUrl', null));
 
+        $this->get('/?via=fiverr')->assertInertia(fn (Assert $page) => $page
+            ->where('marketplace', 'fiverr')
+            ->where('profile.email', ''));
+
         $this->get('/?via=direct')->assertInertia(fn (Assert $page) => $page->where('profile.email', 'me@example.test'));
     }
 }

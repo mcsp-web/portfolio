@@ -39,6 +39,7 @@ const open = ref(false);
                 <p>© {{ new Date().getFullYear() }} {{ profile.company || profile.name }}. Screens shown use demo data; client details are withheld.</p>
                 <div class="flex gap-5">
                     <a v-if="profile.upwork_url" :href="profile.upwork_url" class="hover:text-ink" rel="noopener" target="_blank">Upwork</a>
+                    <a v-if="profile.fiverr_url" :href="profile.fiverr_url" class="hover:text-ink" rel="noopener" target="_blank">Fiverr</a>
                     <a v-if="profile.linkedin_url" :href="profile.linkedin_url" class="hover:text-ink" rel="noopener" target="_blank">LinkedIn</a>
                     <a v-if="profile.github_url" :href="profile.github_url" class="hover:text-ink" rel="noopener" target="_blank">GitHub</a>
                     <a v-if="profile.website_url" :href="profile.website_url" class="hover:text-ink" rel="noopener" target="_blank">Website</a>

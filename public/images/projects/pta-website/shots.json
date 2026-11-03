@@ -1,0 +1,28 @@
+[
+  {
+    "file": "01-home.webp",
+    "kind": "public",
+    "caption": "Home page: welcome, mission, values and the year\u2019s activities",
+    "cover": true
+  },
+  {
+    "file": "02-calendar.webp",
+    "kind": "public",
+    "caption": "Public calendar with colour-coded events and a subscribe link"
+  },
+  {
+    "file": "03-join-mobile.webp",
+    "kind": "mobile",
+    "caption": "Parent sign-up on a phone, step 1 of 4"
+  },
+  {
+    "file": "04-signups.webp",
+    "kind": "admin",
+    "caption": "Sign-up roster: filter by status and committee, search, export to CSV"
+  },
+  {
+    "file": "05-calendar-manager.webp",
+    "kind": "admin",
+    "caption": "Calendar manager: every event with category, audience and source"
+  }
+]
