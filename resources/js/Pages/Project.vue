@@ -85,7 +85,7 @@ const meta = computed(() =>
                     <button type="button" class="group block w-full cursor-zoom-in rounded-2xl bg-[#e9eef2] p-3 ring-1 ring-line sm:p-6" @click="zoom = true" :aria-label="`Enlarge: ${current.caption || 'screenshot'}`">
                         <img :src="current.url" :alt="current.caption || `${project.title} screenshot`"
                              class="mx-auto rounded-lg shadow-[0_24px_60px_-28px_rgba(12,42,69,.5)]"
-                             :class="current.kind === 'mobile' ? 'max-h-[640px] w-auto' : 'w-full'" />
+                             :class="current.kind === 'mobile' ? 'max-h-[640px] w-auto' : 'max-h-[78vh] w-full object-cover object-top'" />
                     </button>
                     <figcaption class="mt-3 flex items-center justify-between gap-4 text-sm text-muted">
                         <span><span class="font-semibold text-ink">{{ current.kindLabel }}.</span> {{ current.caption }}</span>
@@ -151,14 +151,14 @@ const meta = computed(() =>
         </article>
 
         <!-- Lightbox -->
-        <div v-if="zoom && current" class="fixed inset-0 z-50 flex items-center justify-center bg-ink/95 p-4" role="dialog" aria-modal="true" :aria-label="current.caption || 'Screenshot'" @click.self="zoom = false">
-            <img :src="current.url" :alt="current.caption || ''" class="max-h-[88vh] max-w-full rounded-lg" />
-            <button type="button" class="absolute top-4 right-4 rounded-full bg-white/10 px-4 py-2 text-sm text-white hover:bg-white/20" @click="zoom = false">Close</button>
+        <div v-if="zoom && current" class="fixed inset-0 z-50 flex justify-center overflow-y-auto bg-ink/95 px-4 py-16" role="dialog" aria-modal="true" :aria-label="current.caption || 'Screenshot'" @click.self="zoom = false">
+            <img :src="current.url" :alt="current.caption || ''" class="h-fit max-w-full rounded-lg" :class="current.kind === 'mobile' ? 'max-h-[84vh]' : 'max-w-[min(100%,1500px)]'" @click.self="zoom = false" />
+            <button type="button" class="fixed top-4 right-4 rounded-full bg-white/10 px-4 py-2 text-sm text-white hover:bg-white/20" @click="zoom = false">Close</button>
             <template v-if="shots.length > 1">
-                <button type="button" class="absolute left-3 rounded-full bg-white/10 p-3 text-white hover:bg-white/20" aria-label="Previous screenshot" @click="step(-1)">‹</button>
-                <button type="button" class="absolute right-3 rounded-full bg-white/10 p-3 text-white hover:bg-white/20" aria-label="Next screenshot" @click="step(1)">›</button>
+                <button type="button" class="fixed top-1/2 left-3 rounded-full bg-white/10 p-3 text-white hover:bg-white/20" aria-label="Previous screenshot" @click="step(-1)">‹</button>
+                <button type="button" class="fixed top-1/2 right-3 rounded-full bg-white/10 p-3 text-white hover:bg-white/20" aria-label="Next screenshot" @click="step(1)">›</button>
             </template>
-            <p class="absolute bottom-4 left-1/2 -translate-x-1/2 text-center text-sm text-white/80">{{ current.caption }}</p>
+            <p class="fixed bottom-4 left-1/2 -translate-x-1/2 text-center text-sm text-white/80">{{ current.caption }}</p>
         </div>
     </PublicLayout>
 </template>

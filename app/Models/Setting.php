@@ -26,6 +26,7 @@ class Setting extends Model
         'location' => 'Miami, FL and remote',
         'email' => 'info@mcspconsulting.com',
         'upwork_url' => '',
+        'fiverr_url' => '',
         'linkedin_url' => 'https://www.linkedin.com/in/christopher-mccalla-923702170',
         'github_url' => '',
         'website_url' => 'https://mcspconsulting.com',

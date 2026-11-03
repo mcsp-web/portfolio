@@ -1,0 +1,63 @@
+[
+  {
+    "file": "01-patient-home.webp",
+    "kind": "mobile",
+    "caption": "Patient home: health profile, consultations, appointments, photos for the doctor and bills",
+    "cover": true
+  },
+  {
+    "file": "02-patient-record.webp",
+    "kind": "admin",
+    "caption": "Patient record: appointments, then each visit with a structured consultation form, private notes, advice, prescription and payment status"
+  },
+  {
+    "file": "03-booking.webp",
+    "kind": "mobile",
+    "caption": "Booking: pick a day and a free time, then the reason for the visit"
+  },
+  {
+    "file": "04-patient-appointments.webp",
+    "kind": "mobile",
+    "caption": "A confirmed appointment with WhatsApp and add-to-calendar buttons"
+  },
+  {
+    "file": "05-health-profile.webp",
+    "kind": "mobile",
+    "caption": "Health profile: identity, emergency contact, allergies, medicines and conditions"
+  },
+  {
+    "file": "06-doctor-home.webp",
+    "kind": "admin",
+    "caption": "Doctor dashboard: patients, appointment requests, payments to check"
+  },
+  {
+    "file": "07-doctor-patients.webp",
+    "kind": "admin",
+    "caption": "Patient list with age, last visit and invitation status"
+  },
+  {
+    "file": "08-appointments-desk.webp",
+    "kind": "admin",
+    "caption": "Appointments desk: confirm, decline or move requests, then the week\u2019s agenda"
+  },
+  {
+    "file": "09-reception-intake.webp",
+    "kind": "admin",
+    "caption": "Reception intake: a new patient and the link to fill in their own file"
+  },
+  {
+    "file": "10-accounting.webp",
+    "kind": "admin",
+    "caption": "Monthly accounting in USD and HTG with paid, unpaid and part-paid bills"
+  },
+  {
+    "file": "11-accounting-unpaid.webp",
+    "kind": "admin",
+    "caption": "Unpaid bills grouped by age, per currency"
+  },
+  {
+    "file": "12-admin-journal.webp",
+    "kind": "admin",
+    "caption": "Staff activity journal (patients are never named in it)"
+  }
+]

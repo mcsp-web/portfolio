@@ -23,6 +23,7 @@ class HandleInertiaRequests extends Middleware
             ...parent::share($request),
             'auth' => ['user' => $request->user()?->only(['name', 'email'])],
             'upworkMode' => fn () => UpworkMode::active($request),
+            'marketplace' => fn () => UpworkMode::marketplace($request),
             'flash' => ['success' => fn () => $request->session()->get('success')],
         ];
     }
