@@ -1,0 +1,43 @@
+[
+  {
+    "file": "01-schedule.webp",
+    "kind": "admin",
+    "caption": "Weekly dispatch board: visits per technician, plus unscheduled and missed work",
+    "cover": true
+  },
+  {
+    "file": "02-dashboard.webp",
+    "kind": "admin",
+    "caption": "Owner home: what needs attention today, money owed, payments this month, the week ahead"
+  },
+  {
+    "file": "03-tech-mobile.webp",
+    "kind": "mobile",
+    "caption": "Technician app: clock in, directions, call, On my way and Start for each visit"
+  },
+  {
+    "file": "04-booking-mobile.webp",
+    "kind": "mobile",
+    "caption": "Customer online booking on a phone, with real-time open slots"
+  },
+  {
+    "file": "05-client.webp",
+    "kind": "admin",
+    "caption": "Client account with balance and invoices paid, partial or unpaid"
+  },
+  {
+    "file": "06-billing.webp",
+    "kind": "admin",
+    "caption": "Billing: billed, paid and outstanding, each invoice tied to its service and visit"
+  },
+  {
+    "file": "07-margin.webp",
+    "kind": "admin",
+    "caption": "Margin report: revenue minus material cost for every completed job"
+  },
+  {
+    "file": "08-landing.webp",
+    "kind": "public",
+    "caption": "Public landing page"
+  }
+]

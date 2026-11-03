@@ -1,0 +1,33 @@
+[
+  {
+    "file": "01-dashboard.webp",
+    "kind": "mobile",
+    "caption": "Member dashboard: today\u2019s macros against targets",
+    "cover": true
+  },
+  {
+    "file": "02-plan.webp",
+    "kind": "mobile",
+    "caption": "AI meal plan built around the member\u2019s targets"
+  },
+  {
+    "file": "03-log.webp",
+    "kind": "mobile",
+    "caption": "Log a meal by ounces or by hand portions"
+  },
+  {
+    "file": "04-security.webp",
+    "kind": "mobile",
+    "caption": "Security checks: reading other members\u2019 data and self-promotion are both blocked"
+  },
+  {
+    "file": "05-coach-members.webp",
+    "kind": "admin",
+    "caption": "Coach view: read-only summary of every member"
+  },
+  {
+    "file": "06-signin.webp",
+    "kind": "mobile",
+    "caption": "Sign-in with demo accounts"
+  }
+]

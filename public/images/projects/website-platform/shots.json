@@ -1,0 +1,33 @@
+[
+  {
+    "file": "01-home.webp",
+    "kind": "public",
+    "caption": "A detailing business site built on the platform",
+    "cover": true
+  },
+  {
+    "file": "02-home.webp",
+    "kind": "public",
+    "caption": "A dental clinic site built on the platform, in a different layout"
+  },
+  {
+    "file": "03-book-m.webp",
+    "kind": "mobile",
+    "caption": "Built-in booking with per-staff calendars"
+  },
+  {
+    "file": "04-owner-agenda.webp",
+    "kind": "admin",
+    "caption": "Owner app: agenda across staff"
+  },
+  {
+    "file": "05-owner-bookings.webp",
+    "kind": "admin",
+    "caption": "Owner app: bookings with payments and refunds"
+  },
+  {
+    "file": "06-preview.webp",
+    "kind": "admin",
+    "caption": "New sites start as AI-drafted previews in Launchpad"
+  }
+]

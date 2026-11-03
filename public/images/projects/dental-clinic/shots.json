@@ -1,0 +1,43 @@
+[
+  {
+    "file": "01-home.webp",
+    "kind": "public",
+    "caption": "French home page with links to book or call",
+    "cover": true
+  },
+  {
+    "file": "02-services.webp",
+    "kind": "public",
+    "caption": "Services page: each treatment and what it includes"
+  },
+  {
+    "file": "03-home-m.webp",
+    "kind": "mobile",
+    "caption": "The home page on a phone"
+  },
+  {
+    "file": "04-book-m.webp",
+    "kind": "mobile",
+    "caption": "Appointment request: choose a service, a dentist and a day"
+  },
+  {
+    "file": "05-book-m2.webp",
+    "kind": "mobile",
+    "caption": "Open time slots, then the patient\u2019s details"
+  },
+  {
+    "file": "06-owner-bookings.webp",
+    "kind": "admin",
+    "caption": "Front desk: confirm, decline or move each request"
+  },
+  {
+    "file": "07-owner-agenda.webp",
+    "kind": "admin",
+    "caption": "Day agenda across all dentists"
+  },
+  {
+    "file": "08-owner-dentistes.webp",
+    "kind": "admin",
+    "caption": "Dentists who take bookings, each with their own calendar"
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "file": "01-home.webp",
+    "kind": "public",
+    "caption": "Home page with the main call to book",
+    "cover": true
+  },
+  {
+    "file": "02-packages.webp",
+    "kind": "public",
+    "caption": "Service packages with starting prices and a most-popular pick"
+  },
+  {
+    "file": "03-book-package-m.webp",
+    "kind": "mobile",
+    "caption": "Booking on a phone: prices change with the vehicle size"
+  },
+  {
+    "file": "04-book-time-m.webp",
+    "kind": "mobile",
+    "caption": "Booking on a phone: service address, then a day and a time"
+  },
+  {
+    "file": "05-owner-bookings.webp",
+    "kind": "admin",
+    "caption": "Owner app: upcoming jobs with payment status, promo codes, cancel and refund"
+  },
+  {
+    "file": "06-owner-calendar.webp",
+    "kind": "admin",
+    "caption": "Month calendar with the number of jobs each day"
+  },
+  {
+    "file": "07-owner-payments.webp",
+    "kind": "admin",
+    "caption": "Payments: monthly totals, refunds and a CSV export for the accountant"
+  },
+  {
+    "file": "08-owner-customers.webp",
+    "kind": "admin",
+    "caption": "Customer list built from bookings, with visits, total spent and Book again"
+  },
+  {
+    "file": "09-owner-plans.webp",
+    "kind": "admin",
+    "caption": "Monthly maintenance plans and their members"
+  }
+]

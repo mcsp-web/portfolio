@@ -1,0 +1,13 @@
+[
+  {
+    "file": "01-editor.webp",
+    "kind": "admin",
+    "caption": "Review screen: every transaction with category, business or personal, and tax treatment (invented demo data)",
+    "cover": true
+  },
+  {
+    "file": "02-review-only.webp",
+    "kind": "admin",
+    "caption": "Filtered to the rows the rules engine couldn\u2019t classify, ready for bulk recoding"
+  }
+]

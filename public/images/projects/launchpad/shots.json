@@ -1,0 +1,38 @@
+[
+  {
+    "file": "01-preview.webp",
+    "kind": "admin",
+    "caption": "Live preview of a drafted client site, ready to send as a proposal",
+    "cover": true
+  },
+  {
+    "file": "02-home.webp",
+    "kind": "admin",
+    "caption": "Client briefs waiting to be built, and every site Launchpad has provisioned"
+  },
+  {
+    "file": "03-content.webp",
+    "kind": "admin",
+    "caption": "Site copy drafted by AI from the brief, editable per language"
+  },
+  {
+    "file": "04-preview-salon.webp",
+    "kind": "admin",
+    "caption": "A different industry layout for a skin-care studio"
+  },
+  {
+    "file": "05-brief.webp",
+    "kind": "admin",
+    "caption": "Client brief, with import from an existing website, Google listing or screenshots"
+  },
+  {
+    "file": "06-provision.webp",
+    "kind": "admin",
+    "caption": "One form provisions repository, database, DNS and hosting"
+  },
+  {
+    "file": "07-teardown.webp",
+    "kind": "admin",
+    "caption": "Guarded teardown: the plan is shown before anything is deleted"
+  }
+]
