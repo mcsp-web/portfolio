@@ -1,24 +1,23 @@
-# ROADMAP — [CLIENT NAME]
+# ROADMAP — Portfolio
 
-What's planned, in progress, and done for this site. Keep it short and current;
-it's the shared to-do between you and Claude Code.
+## Now
+- [ ] First deploy (see DEPLOY.md "First deploy")
+- [ ] Paste Upwork profile URL in Admin → Profile
 
-## Now (in progress)
-- [ ] [current task]
+## Next
+- [ ] Ask clients who agree to be named; update client labels and enable live links
+- [ ] Replace demo screenshots with fresh ones as apps change (Admin → project → Screenshots)
+- [ ] Bring AskDoc back online on its own server and link it as a live demo
 
-## Next (planned)
-- [ ] Design: pages/sections the client asked for
-- [ ] Content: copy + images from client
-- [ ] Contact form → Resend email
-- [ ] Mobile pass
-
-## Backlog (nice to have)
-- [ ] [ideas]
+## Backlog
+- [ ] Two-factor sign-in for the admin
+- [ ] Short screen-recording clips (GIF/MP4) for PureOps and AskDoc
 
 ## Done
 - [x] Site provisioned (repo + Coolify + DB + DNS)
+- [x] Portfolio data model, admin backend, public pages, seeded content and screenshots
 
-## Pending manual steps (don't forget)
-- [ ] Paste real API keys in Coolify (Resend, etc.), then redeploy
-- [ ] Run initial migration: `php artisan migrate --force` (Coolify terminal)
-- [ ] Confirm domain resolves + SSL issued
+## Pending manual steps
+- [ ] `php artisan migrate --force`
+- [ ] `php artisan db:seed --class=PortfolioSeeder --force`
+- [ ] `php artisan portfolio:admin <your email>`

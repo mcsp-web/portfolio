@@ -3,7 +3,54 @@
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+@font-face {
+    font-family: 'Bricolage Grotesque';
+    src: url('/fonts/bricolage-grotesque-latin-wght-normal.woff2') format('woff2-variations');
+    font-weight: 200 800;
+    font-display: swap;
 }
+@font-face {
+    font-family: 'Figtree';
+    src: url('/fonts/figtree-latin-wght-normal.woff2') format('woff2-variations');
+    font-weight: 300 900;
+    font-display: swap;
+}
+
+@theme {
+    --font-sans: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Bricolage Grotesque', 'Figtree', ui-sans-serif, system-ui, sans-serif;
+
+    --color-ink: #0c2a45;
+    --color-ink-2: #123a55;
+    --color-paper: #f5f7f8;
+    --color-line: #dbe3e9;
+    --color-muted: #5a6b7b;
+    --color-teal: #14b8a6;
+    --color-teal-ink: #0f766e;
+    --color-aqua: #5eead4;
+}
+
+@layer base {
+    html { scroll-behavior: smooth; }
+    body { @apply bg-paper text-ink; }
+    :focus-visible { outline: 2px solid var(--color-teal); outline-offset: 3px; border-radius: 4px; }
+    @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+}
+
+@utility display {
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 96;
+    letter-spacing: -0.025em;
+}
+
+/* Admin form controls */
+@utility field-label { @apply mb-1 block text-sm font-medium text-ink; }
+@utility field-hint { @apply mt-1 text-xs text-muted; }
+@utility input { @apply block w-full rounded-md border border-line bg-white px-3 py-2 text-sm text-ink shadow-xs focus:border-teal focus:ring-2 focus:ring-teal/30 focus:outline-none; }
+@utility btn { @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition-colors disabled:opacity-50; }
+@utility btn-primary { @apply btn bg-ink text-white hover:bg-ink-2; }
+@utility btn-quiet { @apply btn border border-line bg-white text-ink hover:bg-paper; }
+@utility btn-danger { @apply btn border border-red-200 bg-white text-red-700 hover:bg-red-50; }

@@ -1,0 +1,53 @@
+[
+  {
+    "file": "01-home.webp",
+    "kind": "public",
+    "caption": "Home page with the main call to request service",
+    "cover": true
+  },
+  {
+    "file": "02-service.webp",
+    "kind": "public",
+    "caption": "Service page: what to send and how papers are served"
+  },
+  {
+    "file": "03-pricing.webp",
+    "kind": "public",
+    "caption": "Pricing by speed of service, plus extras"
+  },
+  {
+    "file": "04-reviews.webp",
+    "kind": "public",
+    "caption": "Approved client reviews with an owner reply"
+  },
+  {
+    "file": "05-home-m.webp",
+    "kind": "mobile",
+    "caption": "The home page on a phone"
+  },
+  {
+    "file": "06-contact-m.webp",
+    "kind": "mobile",
+    "caption": "Inquiry form on a phone"
+  },
+  {
+    "file": "07-admin-inquiries.webp",
+    "kind": "admin",
+    "caption": "Inquiries by client type and language, with CSV export"
+  },
+  {
+    "file": "08-admin-inquiry.webp",
+    "kind": "admin",
+    "caption": "A single inquiry with its details"
+  },
+  {
+    "file": "09-admin-review.webp",
+    "kind": "admin",
+    "caption": "Review moderation: approve, or reject with a reason"
+  },
+  {
+    "file": "10-admin-settings.webp",
+    "kind": "admin",
+    "caption": "Site settings the owner edits: contact details and hours"
+  }
+]

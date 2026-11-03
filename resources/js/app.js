@@ -3,10 +3,10 @@ import { createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from 'ziggy-js';
 
-const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
+const appName = import.meta.env.VITE_APP_NAME || 'James McCalla';
 
 createInertiaApp({
-    title: (title) => (title ? `${title} - ${appName}` : appName),
+    title: (title) => (title ? `${title} | ${appName}` : appName),
 
     resolve: (name) =>
         resolvePageComponent(
@@ -22,6 +22,6 @@ createInertiaApp({
     },
 
     progress: {
-        color: '#4f46e5',
+        color: '#14b8a6',
     },
 });

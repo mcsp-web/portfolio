@@ -1,0 +1,18 @@
+[
+  {
+    "file": "01-answers.webp",
+    "kind": "public",
+    "caption": "Answers grounded in the document, with the source passage and page shown",
+    "cover": true
+  },
+  {
+    "file": "02-not-found.webp",
+    "kind": "public",
+    "caption": "When the answer isn\u2019t in the document, it says so instead of guessing"
+  },
+  {
+    "file": "03-empty.webp",
+    "kind": "public",
+    "caption": "Upload a PDF, Word, text or Markdown file to begin"
+  }
+]

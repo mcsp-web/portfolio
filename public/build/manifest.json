@@ -1,34 +1,20 @@
 {
-  "_fonts-C9MNnjVw.css": {
-    "file": "assets/fonts-C9MNnjVw.css",
-    "src": "_fonts-C9MNnjVw.css"
+  "_AdminLayout-DsYqVyTR.js": {
+    "file": "assets/AdminLayout-DsYqVyTR.js",
+    "name": "AdminLayout",
+    "imports": [
+      "resources/js/app.js"
+    ]
   },
-  "_instrument-sans-400-normal-D1W7dsQl.woff": {
-    "file": "assets/instrument-sans-400-normal-D1W7dsQl.woff",
-    "src": "_instrument-sans-400-normal-D1W7dsQl.woff"
-  },
-  "_instrument-sans-400-normal-DRC__1Mx.woff2": {
-    "file": "assets/instrument-sans-400-normal-DRC__1Mx.woff2",
-    "src": "_instrument-sans-400-normal-DRC__1Mx.woff2"
-  },
-  "_instrument-sans-500-normal-Dk9ku72i.woff2": {
-    "file": "assets/instrument-sans-500-normal-Dk9ku72i.woff2",
-    "src": "_instrument-sans-500-normal-Dk9ku72i.woff2"
-  },
-  "_instrument-sans-500-normal-Z6ESRlEs.woff": {
-    "file": "assets/instrument-sans-500-normal-Z6ESRlEs.woff",
-    "src": "_instrument-sans-500-normal-Z6ESRlEs.woff"
-  },
-  "_instrument-sans-600-normal-B7fBEWYG.woff2": {
-    "file": "assets/instrument-sans-600-normal-B7fBEWYG.woff2",
-    "src": "_instrument-sans-600-normal-B7fBEWYG.woff2"
-  },
-  "_instrument-sans-600-normal-B9e8oLYv.woff": {
-    "file": "assets/instrument-sans-600-normal-B9e8oLYv.woff",
-    "src": "_instrument-sans-600-normal-B9e8oLYv.woff"
+  "_PublicLayout-B1xfGk4j.js": {
+    "file": "assets/PublicLayout-B1xfGk4j.js",
+    "name": "PublicLayout",
+    "imports": [
+      "resources/js/app.js"
+    ]
   },
   "resources/css/app.css": {
-    "file": "assets/app-CRmr95A2.css",
+    "file": "assets/app-D6qPIUwX.css",
     "name": "app",
     "names": [
       "app.css"
@@ -36,22 +22,91 @@
     "src": "resources/css/app.css",
     "isEntry": true
   },
-  "resources/js/Pages/Welcome.vue": {
-    "file": "assets/Welcome-CC6gfyw6.js",
-    "name": "Welcome",
-    "src": "resources/js/Pages/Welcome.vue",
+  "resources/js/Pages/Admin/Login.vue": {
+    "file": "assets/Login-DsAuCf2h.js",
+    "name": "Login",
+    "src": "resources/js/Pages/Admin/Login.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js"
     ]
   },
+  "resources/js/Pages/Admin/Profile.vue": {
+    "file": "assets/Profile-tQW5NwiC.js",
+    "name": "Profile",
+    "src": "resources/js/Pages/Admin/Profile.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_AdminLayout-DsYqVyTR.js"
+    ]
+  },
+  "resources/js/Pages/Admin/Projects/Edit.vue": {
+    "file": "assets/Edit-EwJPTLPC.js",
+    "name": "Edit",
+    "src": "resources/js/Pages/Admin/Projects/Edit.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_AdminLayout-DsYqVyTR.js"
+    ]
+  },
+  "resources/js/Pages/Admin/Projects/Index.vue": {
+    "file": "assets/Index-BPHgt88P.js",
+    "name": "Index",
+    "src": "resources/js/Pages/Admin/Projects/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_AdminLayout-DsYqVyTR.js"
+    ]
+  },
+  "resources/js/Pages/Admin/Stack.vue": {
+    "file": "assets/Stack-D5TBbS8t.js",
+    "name": "Stack",
+    "src": "resources/js/Pages/Admin/Stack.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_AdminLayout-DsYqVyTR.js"
+    ]
+  },
+  "resources/js/Pages/Home.vue": {
+    "file": "assets/Home-CvtNt0iR.js",
+    "name": "Home",
+    "src": "resources/js/Pages/Home.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_PublicLayout-B1xfGk4j.js"
+    ],
+    "css": [
+      "assets/Home-CWz9-M5E.css"
+    ]
+  },
+  "resources/js/Pages/Project.vue": {
+    "file": "assets/Project-Br7znB2z.js",
+    "name": "Project",
+    "src": "resources/js/Pages/Project.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_PublicLayout-B1xfGk4j.js"
+    ]
+  },
   "resources/js/app.js": {
-    "file": "assets/app-CampCALJ.js",
+    "file": "assets/app-Bp7XjkDW.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "dynamicImports": [
-      "resources/js/Pages/Welcome.vue"
+      "resources/js/Pages/Admin/Login.vue",
+      "resources/js/Pages/Admin/Profile.vue",
+      "resources/js/Pages/Admin/Projects/Edit.vue",
+      "resources/js/Pages/Admin/Projects/Index.vue",
+      "resources/js/Pages/Admin/Stack.vue",
+      "resources/js/Pages/Home.vue",
+      "resources/js/Pages/Project.vue"
     ]
   }
 }

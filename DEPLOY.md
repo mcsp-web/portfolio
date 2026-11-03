@@ -1,4 +1,4 @@
-# DEPLOY — [CLIENT NAME]
+# DEPLOY — Portfolio
 
 How this site is deployed and run. Reference when something breaks.
 
@@ -29,3 +29,16 @@ Set manually after provision: RESEND_API_KEY, MAPBOX_ACCESS_TOKEN, MONCASH_* (as
 ## Rollback
 Coolify keeps previous deployments — use the app's Deployments tab to redeploy a
 prior successful build.
+
+## First deploy (portfolio)
+1. Push to `main`; Coolify builds and deploys.
+2. Coolify → app → Terminal:
+   ```
+   php artisan migrate --force
+   php artisan db:seed --class=PortfolioSeeder --force
+   php artisan portfolio:admin you@example.com
+   ```
+3. Sign in at `/admin/login`, open Profile, paste your Upwork URL, check every project.
+4. Uploads: with no MinIO bucket, keep `PORTFOLIO_UPLOAD_DISK=public` and make sure the storage
+   volume is mounted at `storage/app/public` so uploads survive redeploys.
+5. On Upwork, link `https://<domain>/?via=upwork` (contact details removed for Upwork visitors).

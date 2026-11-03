@@ -1,0 +1,48 @@
+[
+  {
+    "file": "01-admin-proposal-editor.webp",
+    "kind": "admin",
+    "caption": "Proposal editor: line items, totals and deposit split",
+    "cover": true
+  },
+  {
+    "file": "02-home.webp",
+    "kind": "public",
+    "caption": "Agency home page"
+  },
+  {
+    "file": "03-pricing.webp",
+    "kind": "public",
+    "caption": "Pricing: build packages and monthly care plans"
+  },
+  {
+    "file": "04-ai-assistants.webp",
+    "kind": "public",
+    "caption": "AI assistants service page"
+  },
+  {
+    "file": "05-proposal-public.webp",
+    "kind": "public",
+    "caption": "The client\u2019s proposal page, ready to accept, sign and pay"
+  },
+  {
+    "file": "06-admin-dashboard.webp",
+    "kind": "admin",
+    "caption": "Console dashboard: leads waiting for a reply, weekly counts, AI usage cap"
+  },
+  {
+    "file": "07-admin-prospects.webp",
+    "kind": "admin",
+    "caption": "Prospect pipeline: local businesses, rating, website status and stage"
+  },
+  {
+    "file": "08-admin-proposals.webp",
+    "kind": "admin",
+    "caption": "Proposals by status with one-time and monthly totals"
+  },
+  {
+    "file": "09-admin-clients.webp",
+    "kind": "admin",
+    "caption": "Clients: stage, next step and balance due"
+  }
+]
