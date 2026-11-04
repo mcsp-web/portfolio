@@ -5,7 +5,6 @@ Derived from CANON.md. What's left, newest decisions first.
 ## Now (James, in the admin)
 - [ ] Bank-statement tool: remove "currency conversion" from its summary/highlights (not switched on in the tool)
 - [ ] Gmail filter so `[Portfolio]` enquiries land in Primary, not Updates (optional)
-- [ ] Confirm a persistent volume is mounted at `storage/app/public` before uploading screenshots in the admin
 - [ ] Add Fiverr profile URL in Admin → Profile if/when the Fiverr profile is live
 - [ ] Submit https://portfolio.mcspconsulting.com/sitemap.xml in Google Search Console (optional)
 
@@ -29,6 +28,7 @@ Derived from CANON.md. What's left, newest decisions first.
 - [x] Upwork profile link filled in
 - [x] Launchpad hidden; broken-screenshot guard and cleanup
 - [x] Link previews (Open Graph cards for home and each project), sitemap.xml, robots.txt
+- [x] Persistent volume `portfolio-uploads` mounted at `storage/app/public`; survival across redeploy verified
 
 ## Pending manual steps
 - None. Migrations run on deploy; the seeder and admin account steps are done.
