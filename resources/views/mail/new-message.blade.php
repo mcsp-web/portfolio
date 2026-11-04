@@ -1,5 +1,5 @@
 <div style="font-family: system-ui, sans-serif; color: #0c2a45; max-width: 560px">
-    <p style="font-size: 18px; font-weight: 700; margin: 0 0 12px">New enquiry from your portfolio</p>
+    <p style="font-size: 18px; font-weight: 700; margin: 0 0 12px">New enquiry from portfolio.mcspconsulting.com</p>
     <p style="margin: 0 0 4px"><strong>{{ $m->name }}</strong> &lt;{{ $m->email }}&gt;</p>
     @if ($m->company)<p style="margin: 0 0 4px">Company: {{ $m->company }}</p>@endif
     @if ($type)<p style="margin: 0 0 4px">Project: {{ $type }}</p>@endif

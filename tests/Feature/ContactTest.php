@@ -31,7 +31,7 @@ class ContactTest extends TestCase
         $m = Message::firstOrFail();
         $this->assertSame('Ana Ruiz', $m->name);
         $this->assertTrue($m->emailed);
-        Mail::assertSent(NewMessage::class, fn ($mail) => $mail->hasTo('me@example.test') && $mail->hasReplyTo('ana@example.com'));
+        Mail::assertSent(NewMessage::class, fn ($mail) => $mail->hasTo('me@example.test') && $mail->hasReplyTo('ana@example.com') && $mail->hasSubject('[Portfolio] New enquiry from Ana Ruiz'));
     }
 
     public function test_mail_failure_still_keeps_the_message(): void
