@@ -1,0 +1,238 @@
+{
+ "stats": [
+  {
+   "value": "190+",
+   "label": "automated tests"
+  },
+  {
+   "value": "14",
+   "label": "optional modules"
+  },
+  {
+   "value": "2",
+   "label": "languages"
+  }
+ ],
+ "groups": [
+  {
+   "name": "Book and pay online",
+   "features": [
+    {
+     "name": "Five-step booking: vehicle, package, extras, where and when, pay"
+    },
+    {
+     "name": "Secure card checkout through Stripe",
+     "detail": "Apple Pay, Google Pay and other methods follow the business's Stripe settings."
+    },
+    {
+     "name": "Prices always worked out on the server, never trusted from the browser"
+    },
+    {
+     "name": "Package prices per vehicle size, with \"call for price\" where needed"
+    },
+    {
+     "name": "Time held while the customer pays, released if they leave"
+    },
+    {
+     "name": "Booking confirmed only once payment is received"
+    },
+    {
+     "name": "Direct booking link for Google, social bios and texts"
+    },
+    {
+     "name": "Service address checked against the US Census address finder",
+     "detail": "Never blocks a booking; unconfirmed addresses are flagged for the owner."
+    },
+    {
+     "name": "Returning customers recognised on their phone or by an emailed code"
+    },
+    {
+     "name": "Customers agree to the published policies before paying"
+    }
+   ]
+  },
+  {
+   "name": "Payments, refunds and promotions",
+   "features": [
+    {
+     "name": "Full or partial refunds from the owner app",
+     "detail": "Customer is emailed; front desk can cancel but never move money."
+    },
+    {
+     "name": "Pay links for bookings made by phone"
+    },
+    {
+     "name": "Payments ledger with fees, refunds, payouts and CSV export"
+    },
+    {
+     "name": "Promo codes created, limited and switched off from the app",
+     "detail": "Expiry, use limits, first booking only and minimum amount."
+    },
+    {
+     "name": "Gift cards sold on the site and used at checkout"
+    },
+    {
+     "name": "Deposit now, balance later by pay link or in person"
+    },
+    {
+     "name": "Tips after the job, kept separate from the job payment"
+    },
+    {
+     "name": "Refunds and disputes made in Stripe reach the booking"
+    },
+    {
+     "name": "Late or duplicate payments kept for review, never lost"
+    },
+    {
+     "name": "Cancellations refunded according to the published policies"
+    }
+   ]
+  },
+  {
+   "name": "Monthly maintenance plans",
+   "features": [
+    {
+     "name": "Monthly subscription plans billed through Stripe"
+    },
+    {
+     "name": "Visit credits added each paid month"
+    },
+    {
+     "name": "First full detail charged with the first bill"
+    },
+    {
+     "name": "Member page to book visits, cancel a visit and update the card"
+    },
+    {
+     "name": "Pause a month up to twice a year"
+    },
+    {
+     "name": "Cancel online with a minimum term"
+    },
+    {
+     "name": "Plans and members managed in the owner app"
+    }
+   ]
+  },
+  {
+   "name": "Owner and crew app",
+   "features": [
+    {
+     "name": "Bookings with address, directions and what was paid"
+    },
+    {
+     "name": "Month calendar with job counts and days off"
+    },
+    {
+     "name": "Book a phone customer: pay link, pay on site or already paid"
+    },
+    {
+     "name": "Customer list with visits, spend, call, text and book again"
+    },
+    {
+     "name": "Menu and prices editor for packages, extras and quoted services"
+    },
+    {
+     "name": "Vehicle sizes added, renamed, reordered or hidden"
+    },
+    {
+     "name": "Policies picked from a list and published in both languages"
+    },
+    {
+     "name": "Reports by month, package, size and returning customers"
+    },
+    {
+     "name": "Owner app in English or Spanish per person"
+    },
+    {
+     "name": "Installs on a phone's home screen",
+     "detail": "Step-by-step install help for every common browser."
+    },
+    {
+     "name": "Phone notifications for new bookings and cancellations"
+    }
+   ]
+  },
+  {
+   "name": "Optional features",
+   "features": [
+    {
+     "name": "Owner switches each extra feature on when ready"
+    },
+    {
+     "name": "Travel time kept free between jobs"
+    },
+    {
+     "name": "Today view for the crew with directions and mark done"
+    },
+    {
+     "name": "Customers move their own booking within the policy window"
+    },
+    {
+     "name": "Rain day: ask every customer that day to pick a new time"
+    },
+    {
+     "name": "Customers' vehicles saved for the crew"
+    },
+    {
+     "name": "Extras priced by vehicle size"
+    },
+    {
+     "name": "Google review request the day after a job"
+    },
+    {
+     "name": "Private before and after job photos"
+    },
+    {
+     "name": "Text message confirmations, reminders and \"on my way\""
+    }
+   ]
+  },
+  {
+   "name": "Website and search",
+   "features": [
+    {
+     "name": "Custom bilingual home page in English and Spanish"
+    },
+    {
+     "name": "Live Google rating and reviews with required credits"
+    },
+    {
+     "name": "\"Leave us a review\" link to Google"
+    },
+    {
+     "name": "Before and after photo pair"
+    },
+    {
+     "name": "Areas served and common questions sections"
+    },
+    {
+     "name": "Search data for a mobile service business with packages and prices"
+    },
+    {
+     "name": "Sitemap in both languages with private pages kept out of search"
+    }
+   ]
+  },
+  {
+   "name": "Security and access",
+   "features": [
+    {
+     "name": "Sign in by password, emailed link or six-digit code"
+    },
+    {
+     "name": "Guessing limits on passwords and codes"
+    },
+    {
+     "name": "Owner and front desk access levels"
+    },
+    {
+     "name": "Signed payment notifications, each processed once"
+    },
+    {
+     "name": "Per-visitor rate limits that can't be bypassed with forged headers"
+    }
+   ]
+  }
+ ]
+}

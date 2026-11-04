@@ -25,6 +25,12 @@ class ProjectRequest extends FormRequest
             'highlights' => $clean($this->input('highlights')),
             'engineering' => $clean($this->input('engineering')),
             'slug' => str((string) ($this->input('slug') ?: $this->input('title')))->slug()->toString(),
+            'stats' => collect(preg_split('/\r?\n/', (string) $this->input('stats')))
+                ->map(fn ($line) => array_map('trim', explode('|', $line, 2)))
+                ->filter(fn ($parts) => count($parts) === 2 && $parts[0] !== '' && $parts[1] !== '')
+                ->map(fn ($parts) => ['value' => $parts[0], 'label' => $parts[1]])
+                ->values()
+                ->all(),
         ]);
     }
 
@@ -54,6 +60,10 @@ class ProjectRequest extends FormRequest
             'show_live_url' => ['boolean'],
             'is_published' => ['boolean'],
             'is_featured' => ['boolean'],
+            'show_feature_list' => ['boolean'],
+            'stats' => ['array', 'max:6'],
+            'stats.*.value' => ['string', 'max:20'],
+            'stats.*.label' => ['string', 'max:60'],
             'technology_ids' => ['array'],
             'technology_ids.*' => ['integer', 'exists:technologies,id'],
         ];

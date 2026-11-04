@@ -1,0 +1,480 @@
+{
+ "stats": [
+  {
+   "value": "1,900+",
+   "label": "automated tests"
+  },
+  {
+   "value": "3",
+   "label": "languages"
+  },
+  {
+   "value": "10",
+   "label": "scheduled jobs"
+  }
+ ],
+ "groups": [
+  {
+   "name": "Proposals clients sign and pay online",
+   "features": [
+    {
+     "name": "Proposal builder from a priced service catalog",
+     "detail": "One-time and monthly lines, custom lines, discounts and drag-to-reorder."
+    },
+    {
+     "name": "Proposals written in the client's language",
+     "detail": "English, French or Spanish, with the English version available as a PDF."
+    },
+    {
+     "name": "Private client link to read, sign and pay"
+    },
+    {
+     "name": "Typed or drawn e-signature with a tamper-proof agreement record",
+     "detail": "The exact document and terms are frozen and fingerprinted at signing."
+    },
+    {
+     "name": "Stale-page guard if a proposal changed while open"
+    },
+    {
+     "name": "Signed PDF copy for the client and the business"
+    },
+    {
+     "name": "Deposit chosen per proposal: percentage, fixed, full or none"
+    },
+    {
+     "name": "Embedded card payment with the card saved for later charges"
+    },
+    {
+     "name": "Client approves the launch, which charges the balance and starts the plan"
+    },
+    {
+     "name": "Client can update their card from the same link"
+    },
+    {
+     "name": "Versions, revisions, resend, withdraw and automatic expiry"
+    },
+    {
+     "name": "Warnings that block sending an incomplete proposal",
+     "detail": "For example a hosted site without a care plan, with a one-click fix."
+    },
+    {
+     "name": "30-day money-back guarantee tracked per business"
+    },
+    {
+     "name": "Domain registration lookup while writing the proposal"
+    },
+    {
+     "name": "Proposals list grouped by number with earlier versions folded"
+    }
+   ]
+  },
+  {
+   "name": "Prospecting with AI research",
+   "features": [
+    {
+     "name": "Find local businesses through Google search inside the console"
+    },
+    {
+     "name": "Automatic website check",
+     "detail": "Mobile-ready, secure, tap-to-call, speed, broken links and site builder."
+    },
+    {
+     "name": "Opportunity score with the reasons shown"
+    },
+    {
+     "name": "Spots businesses that only have a Facebook or Instagram page"
+    },
+    {
+     "name": "AI research: pain points and a first message in their language"
+    },
+    {
+     "name": "Personal preview website generated for each business",
+     "detail": "Uses their own colour, logo and photo, in three styles, with a demo request form."
+    },
+    {
+     "name": "Twelve industry kits for previews",
+     "detail": "Restaurants, beauty, health, trades, auto, schools, churches and more."
+    },
+    {
+     "name": "\"What we noticed on your current site\" findings on the preview"
+    },
+    {
+     "name": "Visitors can ask for the site, ask a question, say not now or opt out"
+    },
+    {
+     "name": "Alert on the first real view of a preview"
+    },
+    {
+     "name": "Find a business's email from its site or data services"
+    },
+    {
+     "name": "Overnight check and research of new prospects"
+    },
+    {
+     "name": "Mark prospects lost with a reason, or reopen them"
+    },
+    {
+     "name": "Convert a prospect into a lead in one click"
+    },
+    {
+     "name": "Spreadsheet export of prospects for other tools"
+    }
+   ]
+  },
+  {
+   "name": "Outreach sequences",
+   "features": [
+    {
+     "name": "Four-step follow-up cadence over about two weeks"
+    },
+    {
+     "name": "Emails sent automatically from a separate outreach mailbox",
+     "detail": "Paced, business hours only, with daily and hourly caps."
+    },
+    {
+     "name": "Replies read back from the mailbox every two minutes"
+    },
+    {
+     "name": "Replies labelled: interested, question, not now, not interested"
+    },
+    {
+     "name": "Follow-ups stop on any reply, bounce or opt-out"
+    },
+    {
+     "name": "Opt-out requests honoured at once and remembered forever"
+    },
+    {
+     "name": "Answer replies from inside the app in the same email thread"
+    },
+    {
+     "name": "Log WhatsApp or phone replies so follow-ups stop"
+    },
+    {
+     "name": "Send on WhatsApp or Facebook with the message pre-written",
+     "detail": "One tap opens the app and logs the contact."
+    },
+    {
+     "name": "Separate words for email and WhatsApp in each language"
+    },
+    {
+     "name": "Call guide with openers, questions and answers to objections"
+    },
+    {
+     "name": "Legal email footer with unsubscribe on every cold email"
+    }
+   ]
+  },
+  {
+   "name": "Leads and clients",
+   "features": [
+    {
+     "name": "Every enquiry lands as a lead, whatever the source",
+     "detail": "Contact form, start page, AI assistant, preview pages and partners."
+    },
+    {
+     "name": "Pipeline stages from new to won or lost"
+    },
+    {
+     "name": "Lead groups: needs reply, follow up, no next step, in talks"
+    },
+    {
+     "name": "Today list of leads due or waiting for a reply"
+    },
+    {
+     "name": "Automatic next step and date after each contact"
+    },
+    {
+     "name": "Reach a lead in one tap by WhatsApp, email or call"
+    },
+    {
+     "name": "Messages written in the lead's language, editable before sending"
+    },
+    {
+     "name": "History that is never rewritten, only corrected"
+    },
+    {
+     "name": "Foreign-language enquiries translated to English on arrival"
+    },
+    {
+     "name": "Phone alarm when a new lead arrives",
+     "detail": "Rings until acknowledged, with a reminder if still unanswered after 5 minutes."
+    },
+    {
+     "name": "Morning summary of who to contact today"
+    },
+    {
+     "name": "Client profile with proposals, money, site, notes and tasks"
+    },
+    {
+     "name": "Pinned notes and dated tasks per client"
+    },
+    {
+     "name": "Failed lead emails retried automatically with a red banner until delivered"
+    }
+   ]
+  },
+  {
+   "name": "Sales partner portal",
+   "features": [
+    {
+     "name": "Partner application, approval and invite by secure link"
+    },
+    {
+     "name": "Partners search and save their own businesses",
+     "detail": "A business saved by someone else shows as taken, never by whom."
+    },
+    {
+     "name": "AI coach: prepare my call, write my follow-up, what do I answer"
+    },
+    {
+     "name": "Hand a business over to the agency with a chosen plan"
+    },
+    {
+     "name": "Three ready-made social posts a day with branded pictures"
+    },
+    {
+     "name": "Personal tracked link for every post and network"
+    },
+    {
+     "name": "Daily goal of posts and messages"
+    },
+    {
+     "name": "Referral links that credit the partner for 60 days"
+    },
+    {
+     "name": "Sales kit with plans, rules and talking points"
+    },
+    {
+     "name": "Earnings page with commission lines and payout status"
+    },
+    {
+     "name": "Business list grouped by due, waiting, in talks, won and lost"
+    }
+   ]
+  },
+  {
+   "name": "Commissions, tax forms and payouts",
+   "features": [
+    {
+     "name": "Commissions earned only on money that actually cleared",
+     "detail": "Refunds become negative lines automatically."
+    },
+    {
+     "name": "Setup and monthly commission rates locked in per partner"
+    },
+    {
+     "name": "30-day hold before a commission is payable"
+    },
+    {
+     "name": "W-9 and W-8BEN tax forms signed electronically"
+    },
+    {
+     "name": "Photo ID upload, shrunk and stripped of location data",
+     "detail": "Deleted automatically 30 days after it is checked."
+    },
+    {
+     "name": "Payouts by Zelle, US bank transfer or PayPal"
+    },
+    {
+     "name": "48-hour safety hold and email when payout details change"
+    },
+    {
+     "name": "Monthly payout run with PayPal and bank files"
+    },
+    {
+     "name": "Year-end list of partners needing a 1099-NEC"
+    },
+    {
+     "name": "Address checks for US and Canadian addresses"
+    },
+    {
+     "name": "Manual adjustments with an audit trail"
+    }
+   ]
+  },
+  {
+   "name": "Marketing site and AI sales assistant",
+   "features": [
+    {
+     "name": "Marketing site in English, French and Spanish",
+     "detail": "Home, services, AI assistants, pricing, about and contact."
+    },
+    {
+     "name": "AI sales assistant that answers visitors and captures leads"
+    },
+    {
+     "name": "Assistant knowledge base edited and versioned in the console",
+     "detail": "Saving needs a password and an authenticator code; errors are flagged."
+    },
+    {
+     "name": "Pricing tables and plans generated from one price catalog"
+    },
+    {
+     "name": "Two-step start page for ads, posts and partners"
+    },
+    {
+     "name": "Custom web app page with quote request"
+    },
+    {
+     "name": "Partner program page with application form"
+    },
+    {
+     "name": "Contact form with translated auto-reply in the visitor's language"
+    },
+    {
+     "name": "Versioned terms, privacy and refund policy pages"
+    },
+    {
+     "name": "Search-ready: sitemap, language tags, structured data and link previews"
+    },
+    {
+     "name": "Old page addresses redirect without losing tracking codes"
+    }
+   ]
+  },
+  {
+   "name": "Payments, money and AI costs",
+   "features": [
+    {
+     "name": "Payments dashboard: balance, next payout and monthly revenue",
+     "detail": "Shows sandbox or live, and still works if Stripe is unreachable."
+    },
+    {
+     "name": "Needs-you list: payment problems, ready to launch, waiting on client"
+    },
+    {
+     "name": "Monthly money ledger with fees, refunds and net, downloadable as CSV"
+    },
+    {
+     "name": "Email notice every time money moves"
+    },
+    {
+     "name": "Handles refunds, chargebacks, failed renewals and card expiry"
+    },
+    {
+     "name": "Care plans that cancel at the end of the paid period"
+    },
+    {
+     "name": "Reminders when a client sits on a finished site",
+     "detail": "With an optional automatic launch date the operator can pause or extend."
+    },
+    {
+     "name": "AI usage and spend by model and feature"
+    },
+    {
+     "name": "Daily caps on AI calls to control cost"
+    },
+    {
+     "name": "AI model prices edited and confirmed in the console"
+    }
+   ]
+  },
+  {
+   "name": "Marketing attribution and dashboard",
+   "features": [
+    {
+     "name": "Tracked short links for every post or flyer"
+    },
+    {
+     "name": "Clicks counted without tracking visitors",
+     "detail": "Link previews and robots are ignored."
+    },
+    {
+     "name": "Each lead records the channel it came from"
+    },
+    {
+     "name": "Funnel per channel and link: clicks, leads, proposals, signed, money received"
+    },
+    {
+     "name": "Dashboard with today's work, leads per week and open proposal value"
+    },
+    {
+     "name": "Where leads come from at a glance"
+    }
+   ]
+  },
+  {
+   "name": "Client site delivery",
+   "features": [
+    {
+     "name": "Discovery questionnaire sent automatically after payment",
+     "detail": "Five steps, save and resume, in the client's language."
+    },
+    {
+     "name": "Answers checked as typed: phone, email, web address, domain, ZIP"
+    },
+    {
+     "name": "Registrar-specific steps to give safe domain access",
+     "detail": "Never a password or a transfer."
+    },
+    {
+     "name": "Secure connection to the site-building system",
+     "detail": "Requests to build, go live or remove a site are queued and tracked."
+    },
+    {
+     "name": "Preview link emailed to the client for review"
+    },
+    {
+     "name": "\"Your site is live\" email after launch"
+    }
+   ]
+  },
+  {
+   "name": "Security and access",
+   "features": [
+    {
+     "name": "Two-factor sign-in with authenticator apps and recovery codes"
+    },
+    {
+     "name": "Forced password change on first sign-in"
+    },
+    {
+     "name": "Sensitive files need the password again",
+     "detail": "Tax forms, IDs and payout files, with every view logged."
+    },
+    {
+     "name": "Tax numbers and bank details encrypted, only last digits shown"
+    },
+    {
+     "name": "Spreadsheet exports protected against formula injection"
+    },
+    {
+     "name": "Content security policy with violation reporting"
+    },
+    {
+     "name": "Website checks that cannot be tricked into reaching private servers"
+    },
+    {
+     "name": "Rate limits on every public form and AI endpoint"
+    },
+    {
+     "name": "Automatic deletion of old enquiries per the privacy policy"
+    }
+   ]
+  },
+  {
+   "name": "Console on the phone",
+   "features": [
+    {
+     "name": "Admin console installable as a phone app with push alerts"
+    },
+    {
+     "name": "Every page designed to fit a phone with no sideways scroll"
+    },
+    {
+     "name": "Folding cards that remember how you left them",
+     "detail": "Open all and close all on long pages."
+    },
+    {
+     "name": "Built-in user guide with a help button beside every page title"
+    },
+    {
+     "name": "Email delivery status, test email and backup mail server"
+    },
+    {
+     "name": "Command-line tools for admin access, two-factor reset and price checks"
+    }
+   ]
+  }
+ ]
+}

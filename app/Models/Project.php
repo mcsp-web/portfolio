@@ -27,7 +27,7 @@ class Project extends Model
     protected $fillable = [
         'slug', 'title', 'tagline', 'category', 'status', 'client_label', 'role', 'year',
         'summary', 'body', 'highlights', 'engineering', 'live_url', 'show_live_url',
-        'is_published', 'is_featured', 'sort_order',
+        'is_published', 'is_featured', 'sort_order', 'stats', 'show_feature_list',
     ];
 
     /**
@@ -37,6 +37,8 @@ class Project extends Model
     {
         return [
             'highlights' => 'array',
+            'stats' => 'array',
+            'show_feature_list' => 'boolean',
             'engineering' => 'array',
             'show_live_url' => 'boolean',
             'is_published' => 'boolean',
@@ -57,6 +59,35 @@ class Project extends Model
     public function screenshots(): HasMany
     {
         return $this->hasMany(Screenshot::class)->orderBy('sort_order')->orderBy('id');
+    }
+
+    public function features(): HasMany
+    {
+        return $this->hasMany(Feature::class)->orderBy('sort_order')->orderBy('id');
+    }
+
+    /**
+     * Visible features grouped for the public page, in their stored order.
+     * Empty when the whole list is switched off for this project.
+     *
+     * @return list<array{name: string, features: list<array{name: string, detail: ?string}>}>
+     */
+    public function publicFeatureGroups(): array
+    {
+        if (! $this->show_feature_list) {
+            return [];
+        }
+
+        $features = $this->relationLoaded('features') ? $this->features : $this->features()->get();
+
+        return $features->where('is_visible', true)
+            ->groupBy('group_name')
+            ->map(fn ($items, $group) => [
+                'name' => (string) $group,
+                'features' => $items->map(fn (Feature $f) => ['name' => $f->name, 'detail' => $f->detail])->values()->all(),
+            ])
+            ->values()
+            ->all();
     }
 
     /**
@@ -103,6 +134,9 @@ class Project extends Model
             'cover' => $this->cover()?->toPublic(),
             'technologies' => $this->technologies->pluck('name')->all(),
             'screenshotCount' => $this->screenshots->count(),
+            'featureCount' => $this->show_feature_list
+                ? ($this->relationLoaded('features') ? $this->features->where('is_visible', true)->count() : $this->features()->where('is_visible', true)->count())
+                : 0,
         ];
     }
 }

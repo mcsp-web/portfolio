@@ -1,0 +1,226 @@
+{
+ "stats": [
+  {
+   "value": "300+",
+   "label": "automated tests"
+  },
+  {
+   "value": "3",
+   "label": "languages"
+  },
+  {
+   "value": "20+",
+   "label": "pages per language"
+  }
+ ],
+ "groups": [
+  {
+   "name": "Customer inquiries",
+   "features": [
+    {
+     "name": "Service request form with consent checkbox",
+     "detail": "Visitors describe the papers to serve; the request is stored and the owner is notified."
+    },
+    {
+     "name": "Confirmation email to the customer in their language"
+    },
+    {
+     "name": "Owner notified by email of every new request"
+    },
+    {
+     "name": "Admin inquiry list with New and Handled filters"
+    },
+    {
+     "name": "Mark a request handled, or back to new"
+    },
+    {
+     "name": "Full request detail with click-to-call and email links"
+    },
+    {
+     "name": "Export requests to a spreadsheet-safe CSV file"
+    },
+    {
+     "name": "Delete a request behind a confirmation page"
+    },
+    {
+     "name": "A request is never lost if email fails",
+     "detail": "The submission is saved and the visitor sees success even when the mail service is down."
+    }
+   ]
+  },
+  {
+   "name": "Reviews and reputation",
+   "features": [
+    {
+     "name": "Customers submit star-rated reviews online"
+    },
+    {
+     "name": "Owner approves, rejects or returns reviews to pending"
+    },
+    {
+     "name": "Public owner replies under each review"
+    },
+    {
+     "name": "Reviews with banned wording cannot be published"
+    },
+    {
+     "name": "Public reviews page, newest first, ten per page"
+    },
+    {
+     "name": "Three newest reviews shown on the home page"
+    },
+    {
+     "name": "Rating summary appears once there are three reviews"
+    },
+    {
+     "name": "Optional Review us on Google button"
+    },
+    {
+     "name": "Pending-review count shown in the admin menu"
+    }
+   ]
+  },
+  {
+   "name": "Three languages",
+   "features": [
+    {
+     "name": "Every public page in English, Spanish and Haitian Creole",
+     "detail": "Same page addresses under /es and /ht, with a language switcher on every page."
+    },
+    {
+     "name": "Owner turns each language on or off from settings"
+    },
+    {
+     "name": "Unfinished translations cannot go live in production"
+    },
+    {
+     "name": "Forms, error messages and error pages follow the page language"
+    },
+    {
+     "name": "Search engines told about each language version"
+    },
+    {
+     "name": "Automatic checks that no page is left half in English"
+    },
+    {
+     "name": "Customer reviews shown exactly as written, never machine-translated"
+    }
+   ]
+  },
+  {
+   "name": "Marketing site and search",
+   "features": [
+    {
+     "name": "Five service pages with prices pulled from one place"
+    },
+    {
+     "name": "Separate pages for attorneys, landlords and individuals"
+    },
+    {
+     "name": "Pricing table, service area and about pages"
+    },
+    {
+     "name": "FAQ with structured data for Google rich results"
+    },
+    {
+     "name": "Help page for people who are being served"
+    },
+    {
+     "name": "Search titles, descriptions and business structured data on every page"
+    },
+    {
+     "name": "Site can be live but hidden from search until launch"
+    },
+    {
+     "name": "Staging copies are never indexed by search engines"
+    },
+    {
+     "name": "Fast-loading hero image and full image alt text"
+    },
+    {
+     "name": "Accessible menus that fit small phones"
+    }
+   ]
+  },
+  {
+   "name": "Owner settings",
+   "features": [
+    {
+     "name": "Owner edits phone, email, hours and service area without a developer"
+    },
+    {
+     "name": "Owner edits every price, including the stakeout minimum",
+     "detail": "A price change updates pricing, service pages, the FAQ and its structured data at once."
+    },
+    {
+     "name": "Every settings change logged with who made it"
+    },
+    {
+     "name": "Saved text checked against banned legal wording"
+    },
+    {
+     "name": "Request-service and online-ordering modes for the main button"
+    }
+   ]
+  },
+  {
+   "name": "Security and access",
+   "features": [
+    {
+     "name": "Two-factor sign-in with authenticator apps"
+    },
+    {
+     "name": "One-time recovery codes, downloadable and replaceable"
+    },
+    {
+     "name": "Sign-in and code attempts limited to stop guessing"
+    },
+    {
+     "name": "Codes cannot be replayed"
+    },
+    {
+     "name": "Separate owner and support accounts with fixed limits",
+     "detail": "One owner and one support account at most, enforced down to the database."
+    },
+    {
+     "name": "Support can reset the owner's two-factor or force a new password"
+    },
+    {
+     "name": "Changing a password signs out every other session"
+    },
+    {
+     "name": "Append-only audit trail of account events"
+    },
+    {
+     "name": "Spam protection on public forms without a captcha",
+     "detail": "Hidden trap fields and timing checks silently discard bots."
+    },
+    {
+     "name": "Staging site behind a password"
+    }
+   ]
+  },
+  {
+   "name": "Legal and compliance",
+   "features": [
+    {
+     "name": "Terms, privacy, disclaimer, accessibility and SMS consent pages"
+    },
+    {
+     "name": "Legal pages fill in current contact details automatically"
+    },
+    {
+     "name": "Wording guard blocks claims the business cannot yet make",
+     "detail": "Words like certified stay locked until the court registration is entered."
+    },
+    {
+     "name": "Automatic deletion of old requests and reviews on schedule",
+     "detail": "Follows the retention periods stated in the privacy policy."
+    },
+    {
+     "name": "Reviewer IP addresses cleared after 90 days"
+    }
+   ]
+  }
+ ]
+}

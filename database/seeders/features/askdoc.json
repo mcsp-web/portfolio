@@ -1,0 +1,106 @@
+{
+ "stats": [
+  {
+   "value": "4",
+   "label": "document formats"
+  },
+  {
+   "value": "2",
+   "label": "AI providers, swappable"
+  },
+  {
+   "value": "4",
+   "label": "cited passages per answer"
+  }
+ ],
+ "groups": [
+  {
+   "name": "Ask your document",
+   "features": [
+    {
+     "name": "Answers drawn only from the uploaded file",
+     "detail": "If the answer is not in the document, it says so instead of guessing."
+    },
+    {
+     "name": "Source passages shown with every answer"
+    },
+    {
+     "name": "Page or part number cited for each source"
+    },
+    {
+     "name": "Match strength shown for each source passage"
+    },
+    {
+     "name": "Tap a source to expand the original text"
+    },
+    {
+     "name": "One-tap example questions to get started"
+    }
+   ]
+  },
+  {
+   "name": "Documents",
+   "features": [
+    {
+     "name": "Upload PDF, Word, text or Markdown files"
+    },
+    {
+     "name": "Drag and drop, or tap to choose a file"
+    },
+    {
+     "name": "Word tables are read, not just paragraphs"
+    },
+    {
+     "name": "Clear messages for scanned PDFs and old .doc files"
+    },
+    {
+     "name": "A failed upload keeps the previous document usable"
+    }
+   ]
+  },
+  {
+   "name": "AI under the hood",
+   "features": [
+    {
+     "name": "Retrieval-augmented answers (RAG)",
+     "detail": "Finds the most relevant passages first, then asks the AI to answer from them."
+    },
+    {
+     "name": "Local embeddings, so document search costs nothing per query"
+    },
+    {
+     "name": "Runs on Claude or OpenAI with a setting change"
+    },
+    {
+     "name": "Overlapping chunks that avoid cutting sentences in half"
+    },
+    {
+     "name": "The AI key stays on the server, never in the browser"
+    }
+   ]
+  },
+  {
+   "name": "Deployment and reliability",
+   "features": [
+    {
+     "name": "Automated tests run before every image build"
+    },
+    {
+     "name": "Container image built in the cloud, not on the server"
+    },
+    {
+     "name": "Health check endpoint for uptime monitoring"
+    },
+    {
+     "name": "Embedding model baked into the image for instant start"
+    },
+    {
+     "name": "Stays responsive while a large document is indexed"
+    },
+    {
+     "name": "Responsive layout for phone and desktop"
+    }
+   ]
+  }
+ ]
+}

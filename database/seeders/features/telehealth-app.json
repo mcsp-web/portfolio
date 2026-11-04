@@ -1,0 +1,466 @@
+{
+ "stats": [
+  {
+   "value": "450+",
+   "label": "automated tests"
+  },
+  {
+   "value": "3",
+   "label": "languages"
+  },
+  {
+   "value": "5",
+   "label": "user roles"
+  },
+  {
+   "value": "2",
+   "label": "native app shells"
+  }
+ ],
+ "groups": [
+  {
+   "name": "Video consultations",
+   "features": [
+    {
+     "name": "Private video room for every confirmed appointment",
+     "detail": "Opens shortly before the start and closes itself after the end, with no recording."
+    },
+    {
+     "name": "Only the patient and their doctor can join",
+     "detail": "Each person gets their own short-lived pass for that room and time."
+    },
+    {
+     "name": "Doctor can open the call early on the day"
+    },
+    {
+     "name": "Join button appears by itself when the call opens",
+     "detail": "Pages refresh quietly, so nobody has to reload."
+    },
+    {
+     "name": "Today's consultations at the top of the doctor's dashboard"
+    },
+    {
+     "name": "Visit marked done automatically when both people joined"
+    },
+    {
+     "name": "No-show marked automatically when the patient never joins"
+    },
+    {
+     "name": "Leaving the call opens the visit note, ready to write"
+    },
+    {
+     "name": "Call screen styled in the clinic's colours"
+    },
+    {
+     "name": "Clear messages and a retry button when a call fails"
+    },
+    {
+     "name": "Fallback to the phone's browser if the in-app call fails"
+    },
+    {
+     "name": "WhatsApp always one tap away as a backup channel"
+    },
+    {
+     "name": "Step-by-step video consultation guide for staff"
+    }
+   ]
+  },
+  {
+   "name": "Appointments and scheduling",
+   "features": [
+    {
+     "name": "Patients request a time in their own time zone",
+     "detail": "Staff see clinic time with the patient's local time beside it."
+    },
+    {
+     "name": "Patients choose their doctor or keep their usual one"
+    },
+    {
+     "name": "Doctor sets weekly hours, visit length, notice and days off"
+    },
+    {
+     "name": "Doctor or front desk confirms or declines requests",
+     "detail": "Declining needs a reason the patient can read."
+    },
+    {
+     "name": "Unanswered requests lapse and free the slot after 24 hours"
+    },
+    {
+     "name": "Double booking is impossible, even with two people clicking at once"
+    },
+    {
+     "name": "Seven-day agenda grouped by day, with jump-to-date"
+    },
+    {
+     "name": "Calendar per doctor or for the whole clinic"
+    },
+    {
+     "name": "Front desk books and moves appointments for patients"
+    },
+    {
+     "name": "Patients cancel online up to two hours before"
+    },
+    {
+     "name": "Mark missed appointments as no-shows"
+    },
+    {
+     "name": "Add-to-calendar file for every confirmed appointment"
+    },
+    {
+     "name": "Email updates when an appointment is booked, moved or cancelled"
+    },
+    {
+     "name": "One-tap WhatsApp reminder with day, time and doctor"
+    },
+    {
+     "name": "Changing hours never silently cancels existing appointments"
+    }
+   ]
+  },
+  {
+   "name": "Patient records and clinical notes",
+   "features": [
+    {
+     "name": "Patient record with notes, prescriptions and advice in one place"
+    },
+    {
+     "name": "Notes and prescription button always one tap away"
+    },
+    {
+     "name": "Structured dermatology consultation form",
+     "detail": "History, location, exam, assessment, plan and red flags, mostly checkboxes."
+    },
+    {
+     "name": "Red-flag warnings shown at the top of the record"
+    },
+    {
+     "name": "Skin type assessed by the doctor and kept with history"
+    },
+    {
+     "name": "Automatic one-paragraph visit summary from the answers"
+    },
+    {
+     "name": "Drafts saved every 20 seconds while the doctor types"
+    },
+    {
+     "name": "Notes can never be edited or deleted, only corrected",
+     "detail": "Corrections are dated and linked to the original, which stays readable."
+    },
+    {
+     "name": "Advice and prescriptions shared with the patient, clinical notes kept private"
+    },
+    {
+     "name": "Printable prescription page with the doctor's details"
+    },
+    {
+     "name": "Patient photos viewed full screen with zoom",
+     "detail": "New photos are flagged until the doctor opens them."
+    },
+    {
+     "name": "Compact patient card: age, sex, profession, skin type, WhatsApp"
+    },
+    {
+     "name": "Search, sort and filter the patient list"
+    },
+    {
+     "name": "Hand a patient over to another doctor",
+     "detail": "The patient is emailed and any upcoming appointment moves with them."
+    },
+    {
+     "name": "Every opening of a record is logged"
+    },
+    {
+     "name": "Profile changes kept as a before-and-after history"
+    },
+    {
+     "name": "Question list for the doctor to keep beside WhatsApp"
+    }
+   ]
+  },
+  {
+   "name": "Patient experience",
+   "features": [
+    {
+     "name": "Passwordless sign-in with a six-digit code",
+     "detail": "Sent by email, or by WhatsApp for patients without email."
+    },
+    {
+     "name": "Stay signed in for 30 days on your own device"
+    },
+    {
+     "name": "Guided first steps: profile, then first appointment"
+    },
+    {
+     "name": "Short six-question health profile",
+     "detail": "A full health history form can be switched on instead."
+    },
+    {
+     "name": "Date of birth picker built for phones"
+    },
+    {
+     "name": "Phone numbers from any country, with flags and formatting"
+    },
+    {
+     "name": "Visit reason in one tap: acne, spots, eczema, hair loss and more"
+    },
+    {
+     "name": "Take or choose photos to send to the doctor",
+     "detail": "Shrunk on the phone before upload, up to six at a time."
+    },
+    {
+     "name": "See whether the doctor has viewed each photo"
+    },
+    {
+     "name": "My visits page with shared advice and prescriptions"
+    },
+    {
+     "name": "My appointments with join, cancel and WhatsApp buttons"
+    },
+    {
+     "name": "Weight and height in pounds and feet or kilograms and centimetres"
+    },
+    {
+     "name": "Optional WhatsApp help button to the front desk"
+    },
+    {
+     "name": "Delete my account from inside the app",
+     "detail": "Lists clearly what is removed and what the law requires the clinic to keep."
+    }
+   ]
+  },
+  {
+   "name": "Billing and payments",
+   "features": [
+    {
+     "name": "Payment request sent when the doctor saves the visit"
+    },
+    {
+     "name": "Bills in US dollars or Haitian gourdes"
+    },
+    {
+     "name": "Branded payment email with a secure payment details page",
+     "detail": "Each detail has a copy button; no account numbers sit in the email itself."
+    },
+    {
+     "name": "Payment message ready to send on WhatsApp in one tap"
+    },
+    {
+     "name": "Patients see their own bills and what is still owed"
+    },
+    {
+     "name": "\"I've paid\" button with reference or screenshot"
+    },
+    {
+     "name": "Staff notified instantly when a patient reports a payment"
+    },
+    {
+     "name": "Record full or partial payments, including those made by relatives"
+    },
+    {
+     "name": "Automatic numbered receipts by email and WhatsApp"
+    },
+    {
+     "name": "Unpaid bills by age: 0–30, 31–60, 61–90 and 90+ days"
+    },
+    {
+     "name": "Accounting views: this month, unpaid and to verify"
+    },
+    {
+     "name": "Cancel, write off or reverse with a two-step confirmation",
+     "detail": "Nothing is ever deleted; every change keeps a reason and an audit trail."
+    },
+    {
+     "name": "Protection against billing the same consultation twice"
+    },
+    {
+     "name": "Resend a payment request, disabled once paid"
+    },
+    {
+     "name": "Monthly spreadsheet export for the accountant"
+    }
+   ]
+  },
+  {
+   "name": "Front desk and team",
+   "features": [
+    {
+     "name": "Dashboards of cards for each role, with live status lines"
+    },
+    {
+     "name": "Front desk sees contact details only, never health data"
+    },
+    {
+     "name": "Add new patients with duplicate detection"
+    },
+    {
+     "name": "Send single-use sign-up links by email or WhatsApp"
+    },
+    {
+     "name": "Sign-up status for each patient, from invited to profile complete"
+    },
+    {
+     "name": "One-tap WhatsApp to any patient with a personal greeting"
+    },
+    {
+     "name": "Team page to invite and remove doctors and receptionists"
+    },
+    {
+     "name": "Several doctors in one clinic, each with their own profile and photo"
+    },
+    {
+     "name": "Transfer all of a leaving doctor's patients in one step"
+    },
+    {
+     "name": "The clinic's last active doctor can never be removed"
+    },
+    {
+     "name": "\"Who sees what\" guide for every role"
+    },
+    {
+     "name": "Help centre with staff guides"
+    }
+   ]
+  },
+  {
+   "name": "Security, privacy and compliance",
+   "features": [
+    {
+     "name": "Health notes, visit reasons and photos encrypted in the database"
+    },
+    {
+     "name": "Staff passwords checked against known data leaks"
+    },
+    {
+     "name": "Two-factor sign-in with authenticator apps and recovery codes"
+    },
+    {
+     "name": "Staff screens lock after 15 idle minutes"
+    },
+    {
+     "name": "Confidentiality agreement accepted by every staff member",
+     "detail": "Each acceptance is kept with version, language, time and address."
+    },
+    {
+     "name": "Staff audit journal that never names a patient"
+    },
+    {
+     "name": "Patient consent to versioned terms, asked again when terms change"
+    },
+    {
+     "name": "Break-glass support access for the software provider",
+     "detail": "Time-limited, needs a reason, emails every doctor and logs every page opened."
+    },
+    {
+     "name": "Admin sees patient counts only, never names or health data"
+    },
+    {
+     "name": "Deactivate and restore accounts instead of deleting them"
+    },
+    {
+     "name": "Changing an account signs it out everywhere at once"
+    },
+    {
+     "name": "One email, one person, one role"
+    },
+    {
+     "name": "Sign-in codes expire in 10 minutes and stop after five wrong tries"
+    },
+    {
+     "name": "Back button never reveals a record after sign-out or lock"
+    },
+    {
+     "name": "Public account-deletion page for app store requirements"
+    }
+   ]
+  },
+  {
+   "name": "Website, blog and help",
+   "features": [
+    {
+     "name": "Public homepage with the doctors, how it works and skin FAQs"
+    },
+    {
+     "name": "Blog written in the app; only a doctor can publish"
+    },
+    {
+     "name": "Articles drafted, published, unpublished or archived, never deleted"
+    },
+    {
+     "name": "Import draft articles prepared by an outside content system"
+    },
+    {
+     "name": "Safe article formatting with a medical disclaimer on every post"
+    },
+    {
+     "name": "Public terms page naming each doctor and where they are licensed"
+    },
+    {
+     "name": "Emergency notice for patients and visitors"
+    },
+    {
+     "name": "Link previews for sharing on WhatsApp and social media"
+    }
+   ]
+  },
+  {
+   "name": "Languages, mobile and speed",
+   "features": [
+    {
+     "name": "French, Haitian Creole and English, switchable on any page"
+    },
+    {
+     "name": "Android and iPhone apps from one codebase",
+     "detail": "The live site runs inside a native shell, so every update shows at once."
+    },
+    {
+     "name": "Push notifications for appointments and payments"
+    },
+    {
+     "name": "Installable web app with install steps for every browser"
+    },
+    {
+     "name": "Every staff page designed for phones as narrow as 320 px"
+    },
+    {
+     "name": "Common tasks in one or two taps"
+    },
+    {
+     "name": "Pages preload in the background for faster navigation"
+    },
+    {
+     "name": "Visible loading bar and spinner on slow connections"
+    },
+    {
+     "name": "Consistent back link on every page"
+    },
+    {
+     "name": "Times shown in each person's own time zone"
+    }
+   ]
+  },
+  {
+   "name": "Behind the scenes",
+   "features": [
+    {
+     "name": "Test doctors and test patients kept apart from real ones"
+    },
+    {
+     "name": "Reset a test patient to start over from scratch"
+    },
+    {
+     "name": "Features switched on per clinic without new code",
+     "detail": "Video, WhatsApp sign-in, accounting, push and the full intake each have a switch."
+    },
+    {
+     "name": "Health lists and consultation form wording editable without a database change"
+    },
+    {
+     "name": "Automatic phone-width checks on every change"
+    },
+    {
+     "name": "Tools for support to reset a lost authenticator"
+    }
+   ]
+  }
+ ]
+}

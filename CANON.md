@@ -50,3 +50,8 @@ are generic until a client agrees to be named.
   and forces https in production. Without it, login posts/redirects used http:// and errors never
   showed. Login page always shows a reason (wrong password, lockout after 5 tries for 60s, expired
   page, server unreachable).
+- 2026-11-04 — Full feature lists: `features` table (group, name, detail, visible, order) plus
+  `projects.stats` and `projects.show_feature_list`. 867 features across the 12 projects, written
+  from each repo (built features only). Admin can hide/show/edit/remove a feature, hide/rename/reorder a
+  group, or switch the whole list off. Seeder loads `database/seeders/features/<slug>.json` only into
+  projects with no features yet, so re-running it never overwrites admin edits.
