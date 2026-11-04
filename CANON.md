@@ -105,8 +105,9 @@ websites; project client labels stay generic until a client agrees to be named.
 - The app must trust the proxy (`trustProxies(at: '*')`) and force https in production, or login
   posts and redirects break behind Cloudflare/Traefik.
 - Env vars in Coolify must not be marked build-only (the Resend key was empty at runtime until fixed).
-- Uploaded screenshots (`public` disk) survive redeploys only if a persistent volume is mounted at
-  `storage/app/public`.
+- Uploaded screenshots (`public` disk) live on the Coolify volume `portfolio-uploads`, mounted at
+  `/var/www/html/storage/app/public` (added 2026-11-04, verified across a redeploy). Remove it and
+  uploads are lost on every deploy.
 
 ## Session log
 - 2026-11-03 — Portfolio built from the site template: models, admin, public pages, 12 projects,
@@ -124,3 +125,5 @@ websites; project client labels stay generic until a client agrees to be named.
   bundled screenshots are skipped and cleaned up by migration. 42 tests passing.
 - 2026-11-04 — Link previews: server-side Open Graph/Twitter tags, designed 1200x630 cards for home
   and each project, sitemap.xml, robots.txt, admin noindex, apple-touch-icon. 47 tests passing.
+- 2026-11-04 — Persistent volume `portfolio-uploads` added in Coolify at `storage/app/public`;
+  a test file survived a redeploy into a new container.
