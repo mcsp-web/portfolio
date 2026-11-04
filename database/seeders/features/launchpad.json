@@ -1,0 +1,387 @@
+{
+ "stats": [
+  {
+   "value": "400+",
+   "label": "automated checks"
+  },
+  {
+   "value": "9",
+   "label": "industry layouts"
+  },
+  {
+   "value": "24",
+   "label": "design looks"
+  },
+  {
+   "value": "4",
+   "label": "languages"
+  }
+ ],
+ "groups": [
+  {
+   "name": "One-click provisioning",
+   "features": [
+    {
+     "name": "Launch a complete client website in one click",
+     "detail": "Creates the database, DNS record, project, code repository, app, settings and first deploy in order."
+    },
+    {
+     "name": "New site repository created from the website template"
+    },
+    {
+     "name": "Site content, logo and photos written in before the first deploy"
+    },
+    {
+     "name": "Database created first so a failure costs nothing",
+     "detail": "If the riskiest step fails, no other resource is created."
+    },
+    {
+     "name": "Secure app key and database password generated automatically"
+    },
+    {
+     "name": "Domain record added in Cloudflare automatically"
+    },
+    {
+     "name": "Optional file storage bucket for sites that take uploads"
+    },
+    {
+     "name": "Sending-only email key made for each new site"
+    },
+    {
+     "name": "Run ledger records every resource a site owns"
+    },
+    {
+     "name": "Failed runs recorded so nothing is left orphaned"
+    },
+    {
+     "name": "Deploy confirmation checked and loudly reported if missing"
+    },
+    {
+     "name": "Clear report of what was created and what is left to do"
+    }
+   ]
+  },
+  {
+   "name": "Client briefs and imports",
+   "features": [
+    {
+     "name": "Client brief form covering business, services, hours and team"
+    },
+    {
+     "name": "Import a client's existing website from a link",
+     "detail": "Reads text, phone, email, WhatsApp, social links, brand colors, logo and photos."
+    },
+    {
+     "name": "Fill details from the business's Google listing",
+     "detail": "Name, address, phone and hours, never ratings or reviews."
+    },
+    {
+     "name": "Read screenshots of social pages with AI"
+    },
+    {
+     "name": "Reference site suggests the closest layout and tone"
+    },
+    {
+     "name": "Photo upload with top photo, reorder, remove and use as logo"
+    },
+    {
+     "name": "AI photo review labels quality and picks the header photo"
+    },
+    {
+     "name": "Crop anchor per photo so subjects stay in frame"
+    },
+    {
+     "name": "US and Haiti market defaults",
+     "detail": "Languages, phone format, dialling code and starting features follow the market."
+    },
+    {
+     "name": "Booking hours, lengths and confirmation mode set in the brief"
+    },
+    {
+     "name": "Private call notes kept off the published site"
+    },
+    {
+     "name": "Fast photo thumbnails for brief and preview pages"
+    }
+   ]
+  },
+  {
+   "name": "AI copy and previews",
+   "features": [
+    {
+     "name": "Draft the whole site's words with AI from the brief"
+    },
+    {
+     "name": "Edit headline, services, questions and search text by hand"
+    },
+    {
+     "name": "AI never invents prices, reviews or awards",
+     "detail": "Owner-supplied facts are shown exactly as written."
+    },
+    {
+     "name": "Nine layouts, one for each type of business"
+    },
+    {
+     "name": "Three alternative looks per layout"
+    },
+    {
+     "name": "Preview matches the live site exactly",
+     "detail": "Preview and live site share one stylesheet."
+    },
+    {
+     "name": "Desktop and phone preview views"
+    },
+    {
+     "name": "Download the preview, save as PDF or share it"
+    },
+    {
+     "name": "Publish an unlisted preview link"
+    },
+    {
+     "name": "Prewritten email, WhatsApp or text to send the preview"
+    }
+   ]
+  },
+  {
+   "name": "Prospecting and proposals",
+   "features": [
+    {
+     "name": "Find local businesses by trade and area",
+     "detail": "Businesses without a website of their own are listed first."
+    },
+    {
+     "name": "Start a brief from a prospect with AI web research"
+    },
+    {
+     "name": "Call notes with pain points, evidence and a matching offer"
+    },
+    {
+     "name": "Anything uncertain is flagged for review before saving"
+    },
+    {
+     "name": "Proposal page showing three designs side by side"
+    },
+    {
+     "name": "Optional offer with an end date on the proposal"
+    },
+    {
+     "name": "\"I want this design\", book a call and call buttons on proposals"
+    },
+    {
+     "name": "AI-drafted outreach email built from the call notes",
+     "detail": "Includes the sender's address and an opt-out line; nothing is sent automatically."
+    }
+   ]
+  },
+  {
+   "name": "Live site management",
+   "features": [
+    {
+     "name": "Publish updated content, colors, logo and photos to a live site"
+    },
+    {
+     "name": "Warns before replacing edits made by hand"
+    },
+    {
+     "name": "Update a live site to the latest template code",
+     "detail": "Compares first and never touches the site's content or media."
+    },
+    {
+     "name": "Photos resized for the web when published"
+    },
+    {
+     "name": "Tab and home-screen icons made from the logo"
+    },
+    {
+     "name": "Mark a hand-built site as custom to protect it from site tools"
+    },
+    {
+     "name": "Undo marking a site as custom"
+    }
+   ]
+  },
+  {
+   "name": "Client portal bridge and go-live",
+   "features": [
+    {
+     "name": "Paid clients' build requests arrive as briefs automatically"
+    },
+    {
+     "name": "Build, go live and remove as single buttons"
+    },
+    {
+     "name": "Plan bought by the client turns booking on"
+    },
+    {
+     "name": "Go live on the client's own domain with root and www"
+    },
+    {
+     "name": "Add a client's domain to Cloudflare in one click",
+     "detail": "Returns the two nameservers to give the client."
+    },
+    {
+     "name": "Existing domain records replaced only after typing the domain"
+    },
+    {
+     "name": "Client's domain added to email sending and switched in once verified"
+    },
+    {
+     "name": "Status reports sent back to the client portal, retried if unreachable"
+    },
+    {
+     "name": "Interrupted builds detected and reported"
+    },
+    {
+     "name": "Guarded removal of a client site and everything it created"
+    }
+   ]
+  },
+  {
+   "name": "Social media studio",
+   "features": [
+    {
+     "name": "AI-drafted posts for Facebook, Instagram, LinkedIn, X and short video"
+    },
+    {
+     "name": "Reword any post for another network"
+    },
+    {
+     "name": "Post ideas suggested by theme"
+    },
+    {
+     "name": "Branded square picture card for every post"
+    },
+    {
+     "name": "AI-generated pictures with per-business counts"
+    },
+    {
+     "name": "Review, approve and schedule queue"
+    },
+    {
+     "name": "Calendar of scheduled, due, failed and posted items"
+    },
+    {
+     "name": "Automatic posting to a connected Facebook Page"
+    },
+    {
+     "name": "Weekly posts drafted for clients on a care plan",
+     "detail": "Left for review or approved and scheduled automatically."
+    },
+    {
+     "name": "Posting pace rules per network that warn or block"
+    },
+    {
+     "name": "Monthly web check for changes to platform posting rules"
+    },
+    {
+     "name": "Weekly research of each client's trade with sources"
+    },
+    {
+     "name": "Repeated posts detected and blocked at approval"
+    },
+    {
+     "name": "Posts in English, Spanish, French or Haitian Creole"
+    },
+    {
+     "name": "Client permission switch before featuring their site"
+    },
+    {
+     "name": "Tracked links and Facebook results for the agency's own posts"
+    },
+    {
+     "name": "Business profiles filled from a website, its code, pasted text or Google"
+    }
+   ]
+  },
+  {
+   "name": "AI assistant setup",
+   "features": [
+    {
+     "name": "Build a client's 24/7 AI assistant knowledge from their content"
+    },
+    {
+     "name": "Upload Word, PDF, text and Markdown documents as knowledge"
+    },
+    {
+     "name": "Review and edit knowledge before publishing"
+    },
+    {
+     "name": "Publish the assistant to the live site in one click"
+    },
+    {
+     "name": "Assistant-only option with an embed line for the client's own website"
+    },
+    {
+     "name": "Monthly conversation counts and costs per assistant"
+    }
+   ]
+  },
+  {
+   "name": "Apps, articles and email",
+   "features": [
+    {
+     "name": "Host an app from an existing repository"
+    },
+    {
+     "name": "Start a new app from the app starter template"
+    },
+    {
+     "name": "Extra settings per app with secrets kept out of reports"
+    },
+    {
+     "name": "Reuse an app's kept database"
+    },
+    {
+     "name": "Icon pack for an app, delivered as a zip"
+    },
+    {
+     "name": "AI-drafted blog articles for app clients",
+     "detail": "Topic ideas, drafts, translations and approval, then handed off as a pull request prompt."
+    },
+    {
+     "name": "Business mailboxes set up through Zoho",
+     "detail": "Domain verified, mail records and signing written, passwords shown once."
+    },
+    {
+     "name": "Mail records merged safely into one SPF record"
+    }
+   ]
+  },
+  {
+   "name": "Security and safe teardown",
+   "features": [
+    {
+     "name": "Behind single sign-on plus an admin password"
+    },
+    {
+     "name": "Only listed pages and endpoints are reachable"
+    },
+    {
+     "name": "Safe link reader that refuses private network addresses",
+     "detail": "Every redirect is checked again."
+    },
+    {
+     "name": "Teardown requires typing the site name"
+    },
+    {
+     "name": "Protected infrastructure names can never be deleted"
+    },
+    {
+     "name": "Code repositories kept on teardown unless asked for by name"
+    },
+    {
+     "name": "App databases held in a restorable bin before deletion"
+    },
+    {
+     "name": "Database backed up before the bin is emptied"
+    },
+    {
+     "name": "Settings page shows which keys are set, never their values"
+    },
+    {
+     "name": "Keys and tokens hidden from every report and error message"
+    }
+   ]
+  }
+ ]
+}

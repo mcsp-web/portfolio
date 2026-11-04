@@ -25,7 +25,7 @@ const move = (p, direction) => router.patch(route('admin.projects.move', p.id), 
                 <div v-else class="h-14 w-24 rounded bg-paper ring-1 ring-line" />
                 <div class="min-w-0 flex-1">
                     <Link :href="route('admin.projects.edit', p.id)" class="font-semibold hover:text-teal-ink">{{ p.title }}</Link>
-                    <p class="text-xs text-muted">{{ p.categoryLabel }}, {{ p.statusLabel }}. {{ p.screenshotCount }} screenshots, {{ p.techCount }} technologies</p>
+                    <p class="text-xs text-muted">{{ p.categoryLabel }}, {{ p.statusLabel }}. {{ p.screenshotCount }} screenshots, {{ p.techCount }} technologies, {{ p.visibleFeatureCount }}/{{ p.featureCount }} features shown</p>
                 </div>
                 <label class="flex items-center gap-2 text-sm">
                     <input type="checkbox" :checked="p.isFeatured" class="rounded border-line" @change="toggle(p, 'is_featured')" /> Featured

@@ -19,6 +19,10 @@ const market = computed(() =>
         : { name: 'Upwork', url: props.profile.upwork_url },
 );
 const filter = ref('all');
+const cta = (p) => {
+    const parts = [p.featureCount >= 10 ? `${p.featureCount} features` : '', p.screenshotCount ? `${p.screenshotCount} screens` : ''].filter(Boolean);
+    return parts.length ? `View project: ${parts.join(' and ')}` : 'View project';
+};
 const visible = computed(() => (filter.value === 'all' ? props.projects : props.projects.filter((p) => p.category === filter.value)));
 const featured = computed(() => visible.value.filter((p) => p.isFeatured));
 const rest = computed(() => visible.value.filter((p) => !p.isFeatured));
@@ -121,7 +125,7 @@ const approach = [
                                 <li v-if="p.technologies.length > 9" class="px-1 py-1 text-xs text-muted">+{{ p.technologies.length - 9 }} more</li>
                             </ul>
                             <Link :href="route('projects.show', p.slug)" class="mt-6 inline-block font-semibold text-teal-ink underline decoration-teal/40 underline-offset-4 hover:decoration-teal">
-                                {{ p.screenshotCount ? `View project and ${p.screenshotCount} screens` : 'View project' }}
+                                {{ cta(p) }}
                             </Link>
                         </div>
                     </article>

@@ -1,0 +1,334 @@
+{
+ "stats": [
+  {
+   "value": "75+",
+   "label": "automated tests"
+  },
+  {
+   "value": "9",
+   "label": "industry layouts"
+  },
+  {
+   "value": "24",
+   "label": "design looks"
+  },
+  {
+   "value": "4",
+   "label": "languages"
+  }
+ ],
+ "groups": [
+  {
+   "name": "Online booking",
+   "features": [
+    {
+     "name": "Customers book a service, day and time on the site"
+    },
+    {
+     "name": "Request mode or instant confirmation",
+     "detail": "In request mode the business confirms each booking from a private email link."
+    },
+    {
+     "name": "Double bookings blocked by the database"
+    },
+    {
+     "name": "Times follow opening hours, service length, notice and closed days"
+    },
+    {
+     "name": "Customers can cancel from their own private link"
+    },
+    {
+     "name": "Confirmation emails to the business and the customer"
+    },
+    {
+     "name": "A booking is undone if the business can't be emailed"
+    },
+    {
+     "name": "Private calendar feed for Google, Apple or Outlook"
+    },
+    {
+     "name": "Times kept in the business's own time zone"
+    },
+    {
+     "name": "Use the business's own booking link instead, if it has one"
+    }
+   ]
+  },
+  {
+   "name": "Staff calendars",
+   "features": [
+    {
+     "name": "A separate calendar for each staff member"
+    },
+    {
+     "name": "Customers pick a person or \"anyone available\""
+    },
+    {
+     "name": "Each person's own hours, services and days off"
+    },
+    {
+     "name": "Move an appointment to another person",
+     "detail": "Warns about hours or days off and records the reason."
+    },
+    {
+     "name": "Two people can be booked at the same time"
+    },
+    {
+     "name": "Days when nobody is in are greyed out on the calendar"
+    },
+    {
+     "name": "Single calendar when the business has no staff list"
+    }
+   ]
+  },
+  {
+   "name": "Owner app",
+   "features": [
+    {
+     "name": "Owner page to answer, confirm and decline bookings"
+    },
+    {
+     "name": "Installs on a phone's home screen like an app"
+    },
+    {
+     "name": "Password-free sign-in by emailed link or six-digit code"
+    },
+    {
+     "name": "Owner and front desk access levels"
+    },
+    {
+     "name": "Owner adds and removes who may sign in"
+    },
+    {
+     "name": "Edit services, prices and lengths"
+    },
+    {
+     "name": "Import services from CSV or Excel, reviewed before saving",
+     "detail": "Re-importing updates existing services instead of duplicating them."
+    },
+    {
+     "name": "Set bookable hours and how a time is confirmed"
+    },
+    {
+     "name": "Phone notifications for new bookings and cancellations"
+    },
+    {
+     "name": "Add-to-calendar buttons for Google, Apple and Outlook"
+    },
+    {
+     "name": "Branded emails in the business's colors with its logo"
+    },
+    {
+     "name": "App and tab icons made from the business logo"
+    },
+    {
+     "name": "Owner settings win over later content updates"
+    }
+   ]
+  },
+  {
+   "name": "Owner website editing",
+   "features": [
+    {
+     "name": "Owner edits headline, about, notice, offer and questions"
+    },
+    {
+     "name": "Owner updates phone, WhatsApp, address, hours and social links"
+    },
+    {
+     "name": "Edits in every site language"
+    },
+    {
+     "name": "Preview unsaved changes before publishing"
+    },
+    {
+     "name": "Full history with undo and \"back to the original\""
+    },
+    {
+     "name": "Upload photos from a phone, resized automatically",
+     "detail": "Location data and other hidden details are removed."
+    },
+    {
+     "name": "Reorder photos, choose the header photo and logo"
+    },
+    {
+     "name": "Tap a photo to set the point that stays in view"
+    },
+    {
+     "name": "Limits on every field so nothing can break the page"
+    },
+    {
+     "name": "Owner changes survive later updates from the agency"
+    }
+   ]
+  },
+  {
+   "name": "News and blog",
+   "features": [
+    {
+     "name": "Owner writes news posts with a simple formatting toolbar"
+    },
+    {
+     "name": "Drafts stay private until published"
+    },
+    {
+     "name": "News page, individual post pages and latest posts on the home page"
+    },
+    {
+     "name": "Posts added to the sitemap with article search data"
+    },
+    {
+     "name": "Nothing typed in a post can run as code on the page"
+    }
+   ]
+  },
+  {
+   "name": "AI assistant",
+   "features": [
+    {
+     "name": "24/7 AI chat assistant that answers from the business's own information"
+    },
+    {
+     "name": "Embed the assistant on any other website with one line"
+    },
+    {
+     "name": "Assistant-only option for businesses keeping their own site"
+    },
+    {
+     "name": "Serious enquiries handed to the business by email"
+    },
+    {
+     "name": "\"Leave your number\" form when limits are reached or AI is down"
+    },
+    {
+     "name": "Per-visitor, per-conversation and monthly limits",
+     "detail": "12 messages a minute, 150 a day, 20 per conversation, plus a monthly allowance."
+    },
+    {
+     "name": "Protected against instructions hidden in visitor messages"
+    },
+    {
+     "name": "Assistant tab with monthly conversations, cost and leads"
+    },
+    {
+     "name": "Embed allowed only on approved websites"
+    },
+    {
+     "name": "Messages deleted after 30 days"
+    }
+   ]
+  },
+  {
+   "name": "Design and layouts",
+   "features": [
+    {
+     "name": "Nine layouts built for different kinds of business"
+    },
+    {
+     "name": "Three looks per layout for a different style"
+    },
+    {
+     "name": "Whole site themed from two brand colors"
+    },
+    {
+     "name": "Text color chosen automatically for readable contrast"
+    },
+    {
+     "name": "Optional blocks for team, numbers, steps, badges, areas, notice and offer"
+    },
+    {
+     "name": "Common questions section with sliding answers"
+    },
+    {
+     "name": "Subtle motion that respects reduced-motion settings"
+    },
+    {
+     "name": "Section bar that slides in after scrolling"
+    },
+    {
+     "name": "Header photo and crop point chosen per photo"
+    },
+    {
+     "name": "Map of the business's address"
+    },
+    {
+     "name": "Pay online button"
+    }
+   ]
+  },
+  {
+   "name": "Languages and contact",
+   "features": [
+    {
+     "name": "English, Spanish, French and Haitian Creole"
+    },
+    {
+     "name": "Language switch with safe fallback"
+    },
+    {
+     "name": "Contact form that emails the business and stores nothing"
+    },
+    {
+     "name": "Click to call and WhatsApp buttons"
+    },
+    {
+     "name": "Phone numbers checked and formatted one consistent way"
+    },
+    {
+     "name": "Email addresses checked, with \"did you mean\" for typos"
+    },
+    {
+     "name": "Numbers from abroad accepted when the site allows them"
+    }
+   ]
+  },
+  {
+   "name": "Search and content",
+   "features": [
+    {
+     "name": "All words, colors and photos come from one content file",
+     "detail": "Content changes need no rebuild."
+    },
+    {
+     "name": "Business details given to search engines as structured data"
+    },
+    {
+     "name": "Page titles and descriptions rendered on the server"
+    },
+    {
+     "name": "Privacy page in the site's language"
+    },
+    {
+     "name": "Lazy-loaded photos"
+    },
+    {
+     "name": "Missing or broken content shows a \"coming soon\" page, never an error"
+    }
+   ]
+  },
+  {
+   "name": "Behind the scenes",
+   "features": [
+    {
+     "name": "Spam trap and per-visitor rate limits on every form"
+    },
+    {
+     "name": "Push notifications built without third-party libraries",
+     "detail": "Encryption is checked against the official standard's own example."
+    },
+    {
+     "name": "Notifications only sent to real push services"
+    },
+    {
+     "name": "Agency can see what the owner changed, with a private token"
+    },
+    {
+     "name": "Content from outside is cleaned before it reaches the page"
+    },
+    {
+     "name": "Ships ready to deploy as a container"
+    }
+   ]
+  }
+ ]
+}

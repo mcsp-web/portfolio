@@ -1,0 +1,547 @@
+{
+ "stats": [
+  {
+   "value": "1,300+",
+   "label": "automated tests"
+  },
+  {
+   "value": "7",
+   "label": "industries"
+  },
+  {
+   "value": "7",
+   "label": "staff roles"
+  },
+  {
+   "value": "3",
+   "label": "languages"
+  }
+ ],
+ "groups": [
+  {
+   "name": "Scheduling and dispatch",
+   "features": [
+    {
+     "name": "Drag-and-drop schedule board",
+     "detail": "Day, week, month and list views with technicians as rows or columns."
+    },
+    {
+     "name": "Resize a visit to change its length",
+     "detail": "Blocks are sized by job length, with a live time preview while dragging."
+    },
+    {
+     "name": "Find a time",
+     "detail": "Suggests open slots for qualified technicians, respecting hours, time off and drive time."
+    },
+    {
+     "name": "Best-order route optimization for a technician's day"
+    },
+    {
+     "name": "Drive times between visits and a route map"
+    },
+    {
+     "name": "Smart warnings before saving",
+     "detail": "Flags double-bookings, after-hours, past times, short notice, time off and missing skills."
+    },
+    {
+     "name": "Technician skills matched to service requirements"
+    },
+    {
+     "name": "Undo moves and resizes with one tap or Ctrl+Z"
+    },
+    {
+     "name": "Bulk move or reassign many visits at once"
+    },
+    {
+     "name": "Arrival windows shown to customers",
+     "detail": "For example \"between 9:00 and 11:00 AM\", set per business or per visit."
+    },
+    {
+     "name": "Technician time off shown on the board"
+    },
+    {
+     "name": "Printable day sheet per technician"
+    },
+    {
+     "name": "Live board that refreshes itself every 30 seconds"
+    },
+    {
+     "name": "Color visits by status, technician or service"
+    },
+    {
+     "name": "Choose what each visit card shows",
+     "detail": "Service, technician, address, phone, price or arrival window."
+    },
+    {
+     "name": "One-time jobs with unscheduled-jobs queue"
+    },
+    {
+     "name": "Recurring service plans with flexible end rules",
+     "detail": "Run until cancelled, after a set number of visits, or until a date."
+    },
+    {
+     "name": "Per-day business hours with closed-hours shading"
+    },
+    {
+     "name": "Optional email to the customer when a visit moves"
+    },
+    {
+     "name": "Phone-friendly dispatch screen for the office"
+    }
+   ]
+  },
+  {
+   "name": "Technician field app",
+   "features": [
+    {
+     "name": "Installable mobile app for technicians"
+    },
+    {
+     "name": "Works offline and syncs when back online",
+     "detail": "Completions, signatures and photos wait on the phone and send automatically, exactly once."
+    },
+    {
+     "name": "On my way and Start buttons",
+     "detail": "On my way can email the customer automatically."
+    },
+    {
+     "name": "Customer signature capture on the phone"
+    },
+    {
+     "name": "Before and after photos with location and time stamps"
+    },
+    {
+     "name": "Photos compressed on the phone before upload"
+    },
+    {
+     "name": "Business-set completion rules",
+     "detail": "Require or remind about photos, before/after shots, customer name or signature, per service."
+    },
+    {
+     "name": "Customer not home option that waives sign-off"
+    },
+    {
+     "name": "Industry-specific job questions",
+     "detail": "Target pest, turf condition, filter size, meter readings and more."
+    },
+    {
+     "name": "Record materials used, deducted from the truck's stock"
+    },
+    {
+     "name": "Printable service report for each completed visit"
+    },
+    {
+     "name": "Screen stays awake while tracking location"
+    },
+    {
+     "name": "Upcoming days and collapsible visit cards"
+    },
+    {
+     "name": "Office can complete visits on a technician's behalf"
+    }
+   ]
+  },
+  {
+   "name": "Online booking and customer portal",
+   "features": [
+    {
+     "name": "Public booking page with no login needed",
+     "detail": "Customers pick a service, add-ons and an open time."
+    },
+    {
+     "name": "Booking for every industry",
+     "detail": "Vehicle-size pricing for detailing, flat prices for services, quantity requests for water and fuel."
+    },
+    {
+     "name": "Instant booking or request-and-confirm mode"
+    },
+    {
+     "name": "Service area by ZIP code or radius, with travel fees"
+    },
+    {
+     "name": "Lead time, daily caps and booking-window limits"
+    },
+    {
+     "name": "Customers reschedule or cancel from a secure link"
+    },
+    {
+     "name": "Booking inbox for requests that need confirming"
+    },
+    {
+     "name": "Office alert email for every new online booking"
+    },
+    {
+     "name": "Shareable booking link with QR code"
+    },
+    {
+     "name": "Passwordless customer portal sign-in by email link"
+    },
+    {
+     "name": "Customers view and pay invoices in the portal"
+    },
+    {
+     "name": "Upcoming and past service history for customers"
+    },
+    {
+     "name": "Send customers a link to drop their own map pin"
+    }
+   ]
+  },
+  {
+   "name": "Billing, payments and quotes",
+   "features": [
+    {
+     "name": "Online card payments into the business's own Stripe account",
+     "detail": "Pay online links on invoices, reminders, the public invoice page and the portal."
+    },
+    {
+     "name": "Invoices generated automatically from completed visits"
+    },
+    {
+     "name": "Itemized invoices with PDF download and email"
+    },
+    {
+     "name": "Partial payments, payment history and reversals"
+    },
+    {
+     "name": "Deposits on one-time jobs"
+    },
+    {
+     "name": "Quotes with public link, PDF and e-signature acceptance"
+    },
+    {
+     "name": "Convert an accepted quote into a job"
+    },
+    {
+     "name": "Automatic overdue invoice reminders"
+    },
+    {
+     "name": "Automatic quote follow-ups"
+    },
+    {
+     "name": "Review requests after completed visits"
+    },
+    {
+     "name": "Per-unit billing on the quantity actually delivered"
+    },
+    {
+     "name": "Service packages with bundle discounts"
+    },
+    {
+     "name": "Mid-contract cancellation billing with preview"
+    },
+    {
+     "name": "Custom invoice prefix and numbering"
+    },
+    {
+     "name": "Payment receipt and job confirmation emails"
+    },
+    {
+     "name": "Billing rolls up across a client's multiple sites"
+    },
+    {
+     "name": "Currency follows the business's country"
+    }
+   ]
+  },
+  {
+   "name": "Clients and sales pipeline",
+   "features": [
+    {
+     "name": "Client Hub with balance, invoices, visits, sites and notes in one page"
+    },
+    {
+     "name": "Multiple service addresses per client"
+    },
+    {
+     "name": "Import clients from CSV or Excel with review and undo",
+     "detail": "Columns matched automatically in English, French or Spanish; problem rows reported."
+    },
+    {
+     "name": "Country-aware address forms with verification",
+     "detail": "US, Haiti, Dominican Republic, Canada, Mexico and more, each in its own format."
+    },
+    {
+     "name": "Automatic map pins from addresses, with manual pin drop"
+    },
+    {
+     "name": "Leads pipeline with notes and conversion to client"
+    },
+    {
+     "name": "Client tags and fast server-side search"
+    },
+    {
+     "name": "Clients-to-call list for clients without a service"
+    },
+    {
+     "name": "Customer vehicles on file for detailing businesses"
+    },
+    {
+     "name": "Starting balance when moving from another system"
+    },
+    {
+     "name": "Phone numbers checked and stored in international format"
+    }
+   ]
+  },
+  {
+   "name": "Built for seven industries",
+   "features": [
+    {
+     "name": "Pest control, lawn care, HVAC, car wash and detailing, water delivery, fuel delivery and general service"
+    },
+    {
+     "name": "Each industry gets its own words, services and screens",
+     "detail": "A fuel business sees drivers and deliveries; a detailer sees vehicles and packages."
+    },
+    {
+     "name": "Starter services pre-loaded at sign-up for each industry"
+    },
+    {
+     "name": "Screens and options that don't fit an industry are hidden"
+    },
+    {
+     "name": "Pesticide application records",
+     "detail": "EPA number, active ingredient, target pest, area, method, rate and applicator ID."
+    },
+    {
+     "name": "Customer-editable pick lists",
+     "detail": "Target pests, treatment areas, application methods, units, categories, vehicle sizes, suppliers."
+    },
+    {
+     "name": "Industry-specific completion defaults"
+    },
+    {
+     "name": "Proof of delivery with recipient name and signature"
+    }
+   ]
+  },
+  {
+   "name": "Fuel and liquid delivery operations",
+   "features": [
+    {
+     "name": "Meter start and end readings on every delivery",
+     "detail": "Implausible readings are challenged; the invoice uses the metered quantity."
+    },
+    {
+     "name": "Daily truck reconciliation with variance tolerance"
+    },
+    {
+     "name": "Base tank dip readings before and after receiving"
+    },
+    {
+     "name": "Supplier loads tracked from order to payment and close"
+    },
+    {
+     "name": "Custody exceptions with approval, rejection and invoicing"
+    },
+    {
+     "name": "Truck compartments with product-compatibility guard"
+    },
+    {
+     "name": "Switch-loading safety checks between products"
+    },
+    {
+     "name": "Truck return-to-base readings"
+    },
+    {
+     "name": "Delivery verification queue with photo-distance check",
+     "detail": "Flags photos taken far from the customer's address for review."
+    },
+    {
+     "name": "Container deliveries with empties tracking"
+    },
+    {
+     "name": "Weather recorded at the time of each metered delivery"
+    }
+   ]
+  },
+  {
+   "name": "Inventory, fleet and stock",
+   "features": [
+    {
+     "name": "Inventory with low-stock and oversold alerts"
+    },
+    {
+     "name": "Weighted-average product costing"
+    },
+    {
+     "name": "Stock held in the warehouse and on each truck"
+    },
+    {
+     "name": "Stock transfers between warehouse and trucks",
+     "detail": "Drivers can move stock mid-route from their own truck."
+    },
+    {
+     "name": "Supplier receipts and restocking"
+    },
+    {
+     "name": "Product packaging (cases, jugs) sold by the pack"
+    },
+    {
+     "name": "Fleet management with truck types and capacity"
+    },
+    {
+     "name": "Deactivate a truck safely, with stock write-off and email notice"
+    },
+    {
+     "name": "Supplier directory"
+    }
+   ]
+  },
+  {
+   "name": "Team, time and payroll",
+   "features": [
+    {
+     "name": "Clock in and clock out with optional GPS"
+    },
+    {
+     "name": "Weekly timesheets with labour cost and CSV export"
+    },
+    {
+     "name": "Payroll by salary, hourly, commission or flat fee"
+    },
+    {
+     "name": "Technician performance scorecard"
+    },
+    {
+     "name": "Staff profiles with notes timeline and file attachments"
+    },
+    {
+     "name": "Owner can also work in the field"
+    },
+    {
+     "name": "Deactivate staff without losing their history"
+    }
+   ]
+  },
+  {
+   "name": "Live tracking and reports",
+   "features": [
+    {
+     "name": "Live map of technicians in the field"
+    },
+    {
+     "name": "Route replay of a technician's day"
+    },
+    {
+     "name": "Home screen built around what needs action",
+     "detail": "Missed visits, late starts, unscheduled jobs, overdue invoices, open quotes and new leads."
+    },
+    {
+     "name": "Revenue by service with date range and invoiced or paid basis"
+    },
+    {
+     "name": "Money owed with A/R aging buckets"
+    },
+    {
+     "name": "Technician productivity report",
+     "detail": "Visits, revenue, hours, revenue per hour and average time on site."
+    },
+    {
+     "name": "Jobs completed by service"
+    },
+    {
+     "name": "Top clients by revenue"
+    },
+    {
+     "name": "Margin report using real product cost"
+    }
+   ]
+  },
+  {
+   "name": "Setup, plans and customization",
+   "features": [
+    {
+     "name": "Self-service business sign-up with industry choice"
+    },
+    {
+     "name": "15-day free trial with every feature"
+    },
+    {
+     "name": "Starter, Pro and Premium plans with monthly or yearly pricing"
+    },
+    {
+     "name": "Getting Started checklist tailored to each industry"
+    },
+    {
+     "name": "Picture guides and first-time tips with guided tours"
+    },
+    {
+     "name": "App available in English, French and Spanish"
+    },
+    {
+     "name": "Turn modules on or off per business"
+    },
+    {
+     "name": "Company profile with logo used on invoices and emails"
+    },
+    {
+     "name": "Time zone and country detected at sign-up"
+    },
+    {
+     "name": "Customer message settings for reminders and follow-ups"
+    },
+    {
+     "name": "Works on phones, tablets, half-screen windows and desktops"
+    }
+   ]
+  },
+  {
+   "name": "Security and platform administration",
+   "features": [
+    {
+     "name": "Strict separation of every business's data",
+     "detail": "Cross-business access is blocked and covered by automated tests."
+    },
+    {
+     "name": "Ranked staff roles with owner-controlled permissions",
+     "detail": "Owner, admin, manager, HR, accountant, receptionist and technician."
+    },
+    {
+     "name": "Two-factor sign-in for platform administrators"
+    },
+    {
+     "name": "Breached-password check and strong password rules"
+    },
+    {
+     "name": "Login rate limiting and failed-login monitoring"
+    },
+    {
+     "name": "Sign out other devices when a password changes"
+    },
+    {
+     "name": "Customer-granted support access with time limits",
+     "detail": "Support can only sign in as a business after the owner allows it."
+    },
+    {
+     "name": "Audit trail of important changes"
+    },
+    {
+     "name": "Signed, expiring links for invoices, quotes and bookings"
+    },
+    {
+     "name": "Completed visits protected from deletion"
+    },
+    {
+     "name": "Super-admin console to create, suspend and manage businesses"
+    },
+    {
+     "name": "Per-business feature switchboard and plan control"
+    },
+    {
+     "name": "Server health, email, geocoding and security diagnostics"
+    },
+    {
+     "name": "Automatic alerts for server health and email limits"
+    },
+    {
+     "name": "Map and routing usage caps to control cost"
+    },
+    {
+     "name": "Background jobs with automatic retries"
+    }
+   ]
+  }
+ ]
+}

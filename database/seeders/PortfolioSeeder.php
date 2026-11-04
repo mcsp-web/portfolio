@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Feature;
 use App\Models\Project;
 use App\Models\Screenshot;
 use App\Models\Setting;
@@ -52,6 +53,50 @@ class PortfolioSeeder extends Seeder
             }
 
             $this->attachBundledScreenshots($project);
+            $this->attachFeatureList($project);
+        }
+    }
+
+    /**
+     * Load database/seeders/features/<slug>.json into a project that has no features yet,
+     * and its headline numbers if none are set. Never touches a list edited in the admin.
+     */
+    private function attachFeatureList(Project $project): void
+    {
+        $file = database_path("seeders/features/{$project->slug}.json");
+        if (! is_file($file)) {
+            return;
+        }
+
+        $data = json_decode((string) file_get_contents($file), true) ?: [];
+
+        if (empty($project->stats) && ! empty($data['stats'])) {
+            $project->update(['stats' => array_values($data['stats'])]);
+        }
+
+        if ($project->features()->exists()) {
+            return;
+        }
+
+        $order = 0;
+        $rows = [];
+        foreach ($data['groups'] ?? [] as $group) {
+            foreach ($group['features'] ?? [] as $feature) {
+                $rows[] = [
+                    'project_id' => $project->id,
+                    'group_name' => mb_substr((string) $group['name'], 0, 80),
+                    'name' => mb_substr((string) $feature['name'], 0, 160),
+                    'detail' => isset($feature['detail']) && $feature['detail'] !== '' ? mb_substr((string) $feature['detail'], 0, 300) : null,
+                    'is_visible' => true,
+                    'sort_order' => $order++,
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ];
+            }
+        }
+
+        foreach (array_chunk($rows, 200) as $chunk) {
+            Feature::insert($chunk);
         }
     }
 
@@ -385,11 +430,10 @@ class PortfolioSeeder extends Seeder
                 'client_label' => 'Medical practice, Haiti',
                 'role' => 'Design and build',
                 'year' => 2026,
-                'summary' => 'A local tool that reads bank and credit-card statement PDFs in US dollars and gourdes, proves every statement to the cent against its printed totals, sorts transactions into tax categories and converts currency at the central bank’s daily rate.',
+                'summary' => 'A local tool that reads bank and credit-card statement PDFs in US dollars and gourdes, proves every statement to the cent against its printed totals, and sorts transactions into tax categories for review.',
                 'highlights' => [
                     'Statement parsing that reconciles each statement against its own totals',
                     'Rules engine that separates business, personal and transfer transactions',
-                    'Currency conversion at official daily exchange rates',
                     'Browser-based review screen with bulk reclassification',
                     'Accountant-ready Excel workbook export',
                 ],

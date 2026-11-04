@@ -1,0 +1,118 @@
+{
+ "stats": [
+  {
+   "value": "3",
+   "label": "AI meal plans per day"
+  },
+  {
+   "value": "4",
+   "label": "security rules per table"
+  },
+  {
+   "value": "2",
+   "label": "run modes"
+  }
+ ],
+ "groups": [
+  {
+   "name": "Daily nutrition tracking",
+   "features": [
+    {
+     "name": "Today screen: calories and macros against your targets"
+    },
+    {
+     "name": "Log meals by ounces or hand portions",
+     "detail": "Palm of protein, fist of vegetables, cupped hand of carbs, thumb of fats."
+    },
+    {
+     "name": "Protein, carbs and fat per meal, with calories worked out"
+    },
+    {
+     "name": "Seven-day protein average against target"
+    },
+    {
+     "name": "Daily check-in for body weight and water"
+    },
+    {
+     "name": "Delete a meal logged by mistake"
+    },
+    {
+     "name": "Days follow the gym's local time zone, not UTC"
+    }
+   ]
+  },
+  {
+   "name": "AI meal plans",
+   "features": [
+    {
+     "name": "Personal meal plan written by AI from your macro targets"
+    },
+    {
+     "name": "Add preferences such as foods to avoid or training time"
+    },
+    {
+     "name": "Plan totals and per-item macros shown"
+    },
+    {
+     "name": "Three plans per member per day keeps AI costs predictable",
+     "detail": "Plus a gym-wide daily ceiling; the counter resets each local day."
+    },
+    {
+     "name": "Plans generated on the server so the AI key is never exposed"
+    }
+   ]
+  },
+  {
+   "name": "Coach view",
+   "features": [
+    {
+     "name": "Read-only member summary for admins"
+    },
+    {
+     "name": "Days since last log and current logging streak per member"
+    },
+    {
+     "name": "Seven-day protein average, target and latest weight per member"
+    }
+   ]
+  },
+  {
+   "name": "Privacy and security",
+   "features": [
+    {
+     "name": "Members can only ever see their own data",
+     "detail": "Enforced by row-level security in the database, not just by the screens."
+    },
+    {
+     "name": "Members cannot promote themselves to admin"
+    },
+    {
+     "name": "Live security checks you can run from the Account screen"
+    },
+    {
+     "name": "Sign up, sign in and password reset by email"
+    }
+   ]
+  },
+  {
+   "name": "Installable app",
+   "features": [
+    {
+     "name": "Installs on iPhone and Android home screens"
+    },
+    {
+     "name": "Loads fast with a cached app shell"
+    },
+    {
+     "name": "Built-in help guide for members and coaches"
+    },
+    {
+     "name": "Offline demo mode with test accounts and resettable data"
+    },
+    {
+     "name": "Deploys to Vercel or a private server"
+    }
+   ]
+  }
+ ]
+}

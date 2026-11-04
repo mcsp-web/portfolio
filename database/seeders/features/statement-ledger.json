@@ -1,0 +1,149 @@
+{
+ "stats": [
+  {
+   "value": "300+",
+   "label": "automated checks"
+  },
+  {
+   "value": "45+",
+   "label": "classification rules"
+  },
+  {
+   "value": "2",
+   "label": "currencies"
+  }
+ ],
+ "groups": [
+  {
+   "name": "Statement reading and reconciliation",
+   "features": [
+    {
+     "name": "Reads bank and card statement PDFs in USD and HTG",
+     "detail": "Detects the statement type automatically and pulls out every transaction."
+    },
+    {
+     "name": "Every statement proven to the cent against its printed totals"
+    },
+    {
+     "name": "Debits and credits checked against the running balance"
+    },
+    {
+     "name": "Card payments cross-checked between bank and card statements"
+    },
+    {
+     "name": "Confirms every parsed transaction was actually saved",
+     "detail": "Catches rows lost between reading a PDF and storing it."
+    },
+    {
+     "name": "Re-running never duplicates transactions"
+    }
+   ]
+  },
+  {
+   "name": "Classification for tax prep",
+   "features": [
+    {
+     "name": "Automatic categories using a rule library for local tax filing"
+    },
+    {
+     "name": "Business versus personal split, by entity"
+    },
+    {
+     "name": "Tax treatment per row: income, expense, transfer or review"
+    },
+    {
+     "name": "Uncertain rows flagged for human review instead of guessed"
+    },
+    {
+     "name": "Fiscal year assigned to every transaction"
+    },
+    {
+     "name": "Human review always wins over automatic rules on re-runs"
+    }
+   ]
+  },
+  {
+   "name": "Review editor in the browser",
+   "features": [
+    {
+     "name": "Drag-and-drop statement upload with per-file reconcile status"
+    },
+    {
+     "name": "Search by description or amount, accent-insensitive"
+    },
+    {
+     "name": "Filter by account, category, treatment and fiscal year"
+    },
+    {
+     "name": "Review-only toggle to work through flagged rows"
+    },
+    {
+     "name": "Bulk recode many rows at once with a preview first"
+    },
+    {
+     "name": "Undo the last bulk change"
+    },
+    {
+     "name": "Save a decision as a standing rule for future runs"
+    },
+    {
+     "name": "Add new categories on the fly"
+    },
+    {
+     "name": "Warning before changing a fiscal year already filed"
+    },
+    {
+     "name": "One-click save to the local database"
+    },
+    {
+     "name": "Export the reviewed ledger to CSV"
+    }
+   ]
+  },
+  {
+   "name": "Rule safety guardrails",
+   "features": [
+    {
+     "name": "Rules touching too many rows wait for confirmation"
+    },
+    {
+     "name": "Rules that would flip income and expense wait for confirmation"
+    },
+    {
+     "name": "Transfers between own accounts can't be reclassified as revenue"
+    }
+   ]
+  },
+  {
+   "name": "Accountant-ready output",
+   "features": [
+    {
+     "name": "Excel workbook with all transactions and a reconciliation sheet"
+    },
+    {
+     "name": "Profit and loss summary by account and fiscal year"
+    },
+    {
+     "name": "Category rules and assumptions listed in the workbook"
+    }
+   ]
+  },
+  {
+   "name": "Privacy and engineering",
+   "features": [
+    {
+     "name": "Runs entirely on your own computer, no cloud upload"
+    },
+    {
+     "name": "Financial data never committed to source control"
+    },
+    {
+     "name": "Local database with merge-safe saves"
+    },
+    {
+     "name": "Regression suite that never touches the real ledger"
+    }
+   ]
+  }
+ ]
+}

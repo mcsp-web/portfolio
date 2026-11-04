@@ -16,7 +16,7 @@ class HomeController extends Controller
         $projects = Project::query()
             ->published()
             ->ordered()
-            ->with(['technologies', 'screenshots'])
+            ->with(['technologies', 'screenshots', 'features'])
             ->get();
 
         $publishedIds = $projects->pluck('id');

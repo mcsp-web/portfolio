@@ -31,6 +31,12 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::patch('/screenshots/{screenshot}/move', [Admin\ScreenshotController::class, 'move'])->name('screenshots.move');
     Route::delete('/screenshots/{screenshot}', [Admin\ScreenshotController::class, 'destroy'])->name('screenshots.destroy');
 
+    Route::post('/projects/{project:id}/features', [Admin\FeatureController::class, 'store'])->name('features.store');
+    Route::patch('/projects/{project:id}/feature-groups', [Admin\FeatureController::class, 'group'])->name('features.group');
+    Route::patch('/projects/{project:id}/feature-groups/move', [Admin\FeatureController::class, 'moveGroup'])->name('features.moveGroup');
+    Route::patch('/features/{feature}', [Admin\FeatureController::class, 'update'])->name('features.update');
+    Route::delete('/features/{feature}', [Admin\FeatureController::class, 'destroy'])->name('features.destroy');
+
     Route::get('/stack', [Admin\TechnologyController::class, 'index'])->name('technologies.index');
     Route::post('/stack', [Admin\TechnologyController::class, 'store'])->name('technologies.store');
     Route::put('/stack/{technology}', [Admin\TechnologyController::class, 'update'])->name('technologies.update');

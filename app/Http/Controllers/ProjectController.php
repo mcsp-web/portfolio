@@ -16,7 +16,7 @@ class ProjectController extends Controller
     {
         abort_unless($project->is_published, 404);
 
-        $project->load(['technologies', 'screenshots']);
+        $project->load(['technologies', 'screenshots', 'features']);
 
         $ordered = Project::query()->published()->ordered()->get(['id', 'slug', 'title']);
         $index = $ordered->search(fn (Project $p) => $p->id === $project->id);
@@ -30,6 +30,8 @@ class ProjectController extends Controller
                 'role' => $project->role,
                 'body' => $project->body,
                 'highlights' => $project->highlights ?? [],
+                'stats' => $project->stats ?? [],
+                'featureGroups' => $project->publicFeatureGroups(),
                 'engineering' => $project->engineering ?? [],
                 'liveUrl' => $project->show_live_url && ! UpworkMode::active(request()) ? $project->live_url : null,
                 'stack' => collect(Technology::LAYERS)

@@ -18,7 +18,7 @@ class ProjectController extends Controller
 {
     public function index(): Response
     {
-        $projects = Project::query()->ordered()->with(['screenshots', 'technologies'])->get();
+        $projects = Project::query()->ordered()->with(['screenshots', 'technologies'])->withCount(['features', 'features as visible_features_count' => fn ($q) => $q->where('is_visible', true)])->get();
 
         return Inertia::render('Admin/Projects/Index', [
             'projects' => $projects->map(fn (Project $p) => [
@@ -33,6 +33,8 @@ class ProjectController extends Controller
                 'cover' => $p->cover()?->url(),
                 'screenshotCount' => $p->screenshots->count(),
                 'techCount' => $p->technologies->count(),
+                'featureCount' => $p->features_count,
+                'visibleFeatureCount' => $p->show_feature_list ? $p->visible_features_count : 0,
             ]),
         ]);
     }
@@ -120,14 +122,16 @@ class ProjectController extends Controller
      */
     private function formProps(?Project $project): array
     {
-        $project?->load(['technologies', 'screenshots']);
+        $project?->load(['technologies', 'screenshots', 'features']);
 
         return [
             'project' => $project ? [
                 ...$project->only([
                     'id', 'slug', 'title', 'tagline', 'category', 'status', 'client_label', 'role', 'year',
-                    'summary', 'body', 'live_url', 'show_live_url', 'is_published', 'is_featured',
+                    'summary', 'body', 'live_url', 'show_live_url', 'is_published', 'is_featured', 'show_feature_list',
                 ]),
+                'stats' => collect($project->stats ?? [])->map(fn ($s) => "{$s['value']} | {$s['label']}")->implode("\n"),
+                'features' => $project->features->map(fn ($f) => $f->only(['id', 'group_name', 'name', 'detail', 'is_visible']))->values(),
                 'highlights' => implode("\n", $project->highlights ?? []),
                 'engineering' => implode("\n", $project->engineering ?? []),
                 'technology_ids' => $project->technologies->pluck('id'),

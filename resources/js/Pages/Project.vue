@@ -38,6 +38,17 @@ onBeforeUnmount(() => {
     document.body.style.overflow = '';
 });
 
+const featureTotal = computed(() => props.project.featureGroups.reduce((n, g) => n + g.features.length, 0));
+const numbers = computed(() => [
+    ...(featureTotal.value >= 10 ? [{ value: `${Math.floor(featureTotal.value / 10) * 10}+`, label: 'features' }] : []),
+    ...props.project.stats,
+]);
+const allOpen = ref(false);
+const toggleAll = () => {
+    allOpen.value = !allOpen.value;
+    document.querySelectorAll('#features details').forEach((el) => (el.open = allOpen.value));
+};
+
 const meta = computed(() =>
     [
         ['Client', props.project.clientLabel],
@@ -72,6 +83,13 @@ const meta = computed(() =>
                     </div>
                 </dl>
             </header>
+
+            <dl v-if="numbers.length" class="mx-auto mt-8 flex max-w-6xl flex-wrap gap-x-12 gap-y-5 px-5 sm:px-8" aria-label="Project in numbers">
+                <div v-for="n in numbers" :key="n.label">
+                    <dt class="sr-only">{{ n.label }}</dt>
+                    <dd><span class="display block text-3xl font-bold sm:text-4xl">{{ n.value }}</span><span class="text-sm text-muted">{{ n.label }}</span></dd>
+                </div>
+            </dl>
 
             <!-- Gallery -->
             <section v-if="project.screenshots.length" class="mx-auto mt-12 max-w-6xl px-5 sm:px-8" aria-label="Screenshots">
@@ -140,6 +158,36 @@ const meta = computed(() =>
                         <span class="mt-1 block text-sm text-white/70">Tell me what you're building.</span>
                     </a>
                 </aside>
+            </section>
+
+            <!-- Full feature list -->
+            <section v-if="project.featureGroups.length" id="features" class="scroll-mt-20 border-t border-line" aria-labelledby="features-heading">
+                <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8">
+                    <div class="flex flex-wrap items-end justify-between gap-4">
+                        <div>
+                            <h2 id="features-heading" class="display text-3xl font-bold sm:text-4xl">Full feature list</h2>
+                            <p class="mt-2 text-muted">{{ featureTotal }} features across {{ project.featureGroups.length }} areas. Open any area to see everything in it.</p>
+                        </div>
+                        <button type="button" class="rounded-full px-4 py-2 text-sm font-semibold ring-1 ring-ink/20 hover:bg-white" @click="toggleAll">{{ allOpen ? 'Collapse all' : 'Expand all' }}</button>
+                    </div>
+                    <div class="mt-8 grid items-start gap-3 md:grid-cols-2">
+                        <details v-for="g in project.featureGroups" :key="g.name" class="group rounded-xl bg-white ring-1 ring-line open:ring-ink/20">
+                            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 [&::-webkit-details-marker]:hidden">
+                                <span class="display text-lg font-bold">{{ g.name }}</span>
+                                <span class="flex shrink-0 items-center gap-3 text-sm text-muted">
+                                    {{ g.features.length }}
+                                    <svg class="size-4 transition-transform group-open:rotate-180" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6l4 4 4-4" /></svg>
+                                </span>
+                            </summary>
+                            <ul class="space-y-2.5 border-t border-line px-5 py-4">
+                                <li v-for="f in g.features" :key="f.name" class="flex gap-3 text-[15px] leading-snug">
+                                    <svg class="mt-1 size-3.5 shrink-0 text-teal" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M3 8.5l3 3 7-7" /></svg>
+                                    <span>{{ f.name }}<span v-if="f.detail" class="block text-sm text-muted">{{ f.detail }}</span></span>
+                                </li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
             </section>
 
             <nav v-if="next" class="border-t border-line bg-white" aria-label="Next project">

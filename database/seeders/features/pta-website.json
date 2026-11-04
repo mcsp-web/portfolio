@@ -1,0 +1,177 @@
+{
+ "stats": [
+  {
+   "value": "400+",
+   "label": "automated tests"
+  },
+  {
+   "value": "3",
+   "label": "calendar views"
+  },
+  {
+   "value": "2",
+   "label": "staff roles"
+  }
+ ],
+ "groups": [
+  {
+   "name": "Parent signup",
+   "features": [
+    {
+     "name": "Signup unlocked by a private access code from the school"
+    },
+    {
+     "name": "Four-step signup: details, students, committees, review",
+     "detail": "Progress bar, per-step checks and a final review before submitting."
+    },
+    {
+     "name": "Add several students with their grades in one signup"
+    },
+    {
+     "name": "Community members can join without enrolled students"
+    },
+    {
+     "name": "Pick one or more committees to volunteer on"
+    },
+    {
+     "name": "Confirmation email to the family, notification to the PTA"
+    },
+    {
+     "name": "Officers rotate the access code any time",
+     "detail": "The old code stops working at once; families mid-signup can still finish."
+    },
+    {
+     "name": "Signup attempts rate-limited against guessing"
+    }
+   ]
+  },
+  {
+   "name": "Member roster",
+   "features": [
+    {
+     "name": "Signup dashboard with New, Contacted and Approved counts"
+    },
+    {
+     "name": "Search members by parent name or email"
+    },
+    {
+     "name": "Filter by status and committee together"
+    },
+    {
+     "name": "Update a member's status and private notes"
+    },
+    {
+     "name": "Per-committee roster with member count"
+    },
+    {
+     "name": "Export the roster to CSV, filtered or complete",
+     "detail": "Opens cleanly in Excel with accents intact and spreadsheet-formula protection."
+    }
+   ]
+  },
+  {
+   "name": "Calendar",
+   "features": [
+    {
+     "name": "Public calendar with month, list and year views"
+    },
+    {
+     "name": "Filter events by PTA or school"
+    },
+    {
+     "name": "Subscribe in Apple, Google or Outlook calendars",
+     "detail": "A live calendar feed that updates as officers edit events."
+    },
+    {
+     "name": "Officer-only events kept off the public calendar and feed"
+    },
+    {
+     "name": "Officers add, edit, retire and restore events"
+    },
+    {
+     "name": "Mobile-friendly month view"
+    },
+    {
+     "name": "Safe one-time import of the school-year calendar"
+    }
+   ]
+  },
+  {
+   "name": "Content officers manage",
+   "features": [
+    {
+     "name": "Board page with officer photos and honorary members"
+    },
+    {
+     "name": "Committees page with images and descriptions"
+    },
+    {
+     "name": "Highlights photo galleries grouped by school year",
+     "detail": "Up to four photos per post, browsable by year with paging."
+    },
+    {
+     "name": "What-we-do activity cards with optional links"
+    },
+    {
+     "name": "Retire and restore anything instead of deleting it"
+    },
+    {
+     "name": "Image uploads checked for type and size"
+    },
+    {
+     "name": "Alumni giving wall page with pledge levels"
+    },
+    {
+     "name": "Contact page and join call-to-action across the site"
+    }
+   ]
+  },
+  {
+   "name": "Staff accounts and security",
+   "features": [
+    {
+     "name": "Admin and officer roles with different permissions"
+    },
+    {
+     "name": "Admins add, edit, deactivate and reactivate staff"
+    },
+    {
+     "name": "Deactivated staff are signed out immediately"
+    },
+    {
+     "name": "Strong passwords checked against known breaches",
+     "detail": "Follows the NIST password guidance: long minimum and a breached-password check."
+    },
+    {
+     "name": "New staff must choose their own password at first sign-in"
+    },
+    {
+     "name": "The last active admin can never be removed or demoted"
+    },
+    {
+     "name": "Protected accounts other admins cannot change"
+    },
+    {
+     "name": "Password reset and email verification"
+    },
+    {
+     "name": "Access code and private notes never leak to the browser or export"
+    }
+   ]
+  },
+  {
+   "name": "Behind the scenes",
+   "features": [
+    {
+     "name": "School year rolls over automatically each August"
+    },
+    {
+     "name": "Branded error pages for missing or forbidden pages"
+    },
+    {
+     "name": "Command-line tools to create staff and set the access code"
+    }
+   ]
+  }
+ ]
+}

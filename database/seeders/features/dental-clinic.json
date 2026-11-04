@@ -1,0 +1,200 @@
+{
+ "stats": [
+  {
+   "value": "70+",
+   "label": "automated tests"
+  },
+  {
+   "value": "3",
+   "label": "languages"
+  },
+  {
+   "value": "7",
+   "label": "pages per language"
+  }
+ ],
+ "groups": [
+  {
+   "name": "Appointment requests",
+   "features": [
+    {
+     "name": "Patients request an appointment online, day and time"
+    },
+    {
+     "name": "Choose a dentist or \"anyone available\""
+    },
+    {
+     "name": "Each dentist has their own hours, treatments and days off"
+    },
+    {
+     "name": "Times follow clinic hours, treatment length and notice"
+    },
+    {
+     "name": "Same time can't be booked twice for one dentist"
+    },
+    {
+     "name": "Services grouped by category on the booking form"
+    },
+    {
+     "name": "Emergencies sent to call or WhatsApp, not booked online"
+    },
+    {
+     "name": "Patients can cancel from their own private link"
+    }
+   ]
+  },
+  {
+   "name": "Front desk and dentists",
+   "features": [
+    {
+     "name": "Front desk confirms or declines requests"
+    },
+    {
+     "name": "Agenda by day, week and month"
+    },
+    {
+     "name": "Each dentist signs in and sees only their own agenda"
+    },
+    {
+     "name": "Private calendar feed for each dentist and for the clinic"
+    },
+    {
+     "name": "Move an appointment between dentists with a recorded reason"
+    },
+    {
+     "name": "Upcoming appointments as compact cards grouped by day"
+    },
+    {
+     "name": "Administrator, front desk and dentist access levels"
+    },
+    {
+     "name": "Edit treatments, names per language and appointment lengths"
+    },
+    {
+     "name": "Import treatments from CSV or Excel"
+    },
+    {
+     "name": "Edit the public team: names, titles, languages spoken, order"
+    },
+    {
+     "name": "Back office in French with an English switch"
+    },
+    {
+     "name": "Phone notifications for new requests and cancellations"
+    },
+    {
+     "name": "Installs on a phone's home screen",
+     "detail": "Step-by-step install help for every common browser."
+    },
+    {
+     "name": "Password-free sign-in by emailed link or code"
+    }
+   ]
+  },
+  {
+   "name": "Patient emails",
+   "features": [
+    {
+     "name": "Branded \"received\" and \"confirmed\" emails in the patient's language"
+    },
+    {
+     "name": "Calendar file attached with the clinic's address",
+     "detail": "No personal or health details in the email or file."
+    },
+    {
+     "name": "Clinic emails in the clinic's chosen language"
+    }
+   ]
+  },
+  {
+   "name": "Multilingual website",
+   "features": [
+    {
+     "name": "Seven pages in French, English and Spanish",
+     "detail": "Home, treatments, the clinic, patients, tips, appointments and privacy."
+    },
+    {
+     "name": "Each language at its own web address"
+    },
+    {
+     "name": "Language switch keeps you on the same page"
+    },
+    {
+     "name": "Team cards with flags for languages each dentist speaks"
+    },
+    {
+     "name": "Real clinic photos on every page header"
+    },
+    {
+     "name": "Common questions with sliding answers"
+    },
+    {
+     "name": "WhatsApp and call bar on phones"
+    },
+    {
+     "name": "Contact form that emails the clinic"
+    },
+    {
+     "name": "Missing translations fall back to French"
+    }
+   ]
+  },
+  {
+   "name": "Blog",
+   "features": [
+    {
+     "name": "Dental tips blog in three languages"
+    },
+    {
+     "name": "Latest articles shown on the home page"
+    },
+    {
+     "name": "New article added by dropping in a file, no rebuild"
+    },
+    {
+     "name": "Unsafe code in articles stripped automatically"
+    }
+   ]
+  },
+  {
+   "name": "Search and visibility",
+   "features": [
+    {
+     "name": "Dentist, FAQ and article search data"
+    },
+    {
+     "name": "Sitemap of every page and article in every language"
+    },
+    {
+     "name": "Language alternates so search shows the right version"
+    },
+    {
+     "name": "Old addresses redirect to the new pages"
+    },
+    {
+     "name": "Tab and home-screen icons from the clinic logo"
+    }
+   ]
+  },
+  {
+   "name": "Behind the scenes",
+   "features": [
+    {
+     "name": "Haitian phone numbers checked and formatted consistently"
+    },
+    {
+     "name": "International numbers accepted and formatted as typed"
+    },
+    {
+     "name": "Email addresses checked, with \"did you mean\" for typos"
+    },
+    {
+     "name": "Spam trap and per-visitor limits on every form"
+    },
+    {
+     "name": "Broken or missing content never breaks the site"
+    }
+   ]
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 <script setup>
 import { Head, Link, router, useForm } from '@inertiajs/vue3';
-import { computed, ref } from 'vue';
+import { computed, reactive, ref } from 'vue';
 import AdminLayout from '../../../Layouts/AdminLayout.vue';
 
 const props = defineProps({
@@ -30,6 +30,8 @@ const form = useForm({
     show_live_url: p?.show_live_url ?? false,
     is_published: p?.is_published ?? true,
     is_featured: p?.is_featured ?? false,
+    show_feature_list: p?.show_feature_list ?? true,
+    stats: p?.stats ?? '',
     technology_ids: p?.technology_ids ?? [],
 });
 
@@ -60,6 +62,39 @@ const opts = { preserveScroll: true };
 const updateShot = (s, changes) => router.patch(route('admin.screenshots.update', s.id), { caption: s.caption, kind: s.kind, is_cover: s.isCover, ...changes }, opts);
 const moveShot = (s, direction) => router.patch(route('admin.screenshots.move', s.id), { direction }, opts);
 const removeShot = (s) => confirm('Remove this screenshot?') && router.delete(route('admin.screenshots.destroy', s.id), opts);
+
+// Feature list
+const groups = computed(() => {
+    const map = new Map();
+    (p?.features ?? []).forEach((f) => {
+        if (!map.has(f.group_name)) map.set(f.group_name, []);
+        map.get(f.group_name).push(f);
+    });
+    return [...map.entries()].map(([name, items]) => ({ name, items, shown: items.filter((f) => f.is_visible).length }));
+});
+const featureTotals = computed(() => ({
+    total: p?.features?.length ?? 0,
+    shown: (p?.features ?? []).filter((f) => f.is_visible).length,
+}));
+const open = reactive(new Set());
+const toggleOpen = (name) => (open.has(name) ? open.delete(name) : open.add(name));
+const patchFeature = (f, changes) => router.patch(route('admin.features.update', f.id), changes, opts);
+const removeFeature = (f) => confirm(`Remove “${f.name}”?`) && router.delete(route('admin.features.destroy', f.id), opts);
+const setGroupVisible = (g, visible) => router.patch(route('admin.features.group', p.id), { group: g.name, is_visible: visible }, opts);
+const renameGroup = (g, value) => {
+    const name = value.trim();
+    if (name && name !== g.name) router.patch(route('admin.features.group', p.id), { group: g.name, rename: name }, opts);
+};
+const moveGroup = (g, direction) => router.patch(route('admin.features.moveGroup', p.id), { group: g.name, direction }, opts);
+const newFeature = useForm({ group_name: '', name: '', detail: '' });
+const addFeature = () =>
+    newFeature.post(route('admin.features.store', p.id), {
+        preserveScroll: true,
+        onSuccess: () => {
+            open.add(newFeature.group_name);
+            newFeature.reset('name', 'detail');
+        },
+    });
 </script>
 
 <template>
@@ -131,6 +166,11 @@ const removeShot = (s) => confirm('Remove this screenshot?') && router.delete(ro
                         <p class="field-hint">One engineering note per line.</p>
                     </div>
                 </div>
+                <div>
+                    <label class="field-label" for="stats">Headline numbers</label>
+                    <textarea id="stats" v-model="form.stats" rows="3" class="input" placeholder="1,300+ | automated tests" />
+                    <p class="field-hint">One per line as “number | label”. Shown at the top of the project page next to the feature count.</p>
+                </div>
                 <div class="grid gap-5 sm:grid-cols-[1fr_auto] sm:items-end">
                     <div>
                         <label class="field-label" for="live">Live URL</label>
@@ -145,6 +185,7 @@ const removeShot = (s) => confirm('Remove this screenshot?') && router.delete(ro
                 <div class="space-y-3 rounded-xl bg-white p-5 ring-1 ring-line">
                     <label class="flex items-center gap-2 text-sm font-medium"><input v-model="form.is_published" type="checkbox" class="rounded border-line" /> Show on the portfolio</label>
                     <label class="flex items-center gap-2 text-sm font-medium"><input v-model="form.is_featured" type="checkbox" class="rounded border-line" /> Feature at the top</label>
+                    <label class="flex items-center gap-2 text-sm font-medium"><input v-model="form.show_feature_list" type="checkbox" class="rounded border-line" /> Show full feature list</label>
                     <button type="submit" class="btn-primary w-full" :disabled="form.processing">{{ p ? 'Save changes' : 'Create project' }}</button>
                     <button v-if="p" type="button" class="btn-danger w-full" @click="destroy">Delete project</button>
                 </div>
@@ -163,6 +204,51 @@ const removeShot = (s) => confirm('Remove this screenshot?') && router.delete(ro
                 </fieldset>
             </div>
         </form>
+
+        <!-- Feature list -->
+        <section v-if="p" class="mt-10 rounded-xl bg-white p-6 ring-1 ring-line">
+            <div class="flex flex-wrap items-baseline justify-between gap-3">
+                <h2 class="display text-xl font-bold">Full feature list</h2>
+                <p class="text-sm text-muted">
+                    {{ featureTotals.shown }} of {{ featureTotals.total }} features shown
+                    <span v-if="!form.show_feature_list" class="ml-2 rounded bg-amber-50 px-2 py-0.5 font-semibold text-amber-800 ring-1 ring-amber-200">Whole list hidden</span>
+                </p>
+            </div>
+            <p class="mt-1 text-sm text-muted">Untick a feature to hide it, or hide a whole group. Hidden items stay here so you can bring them back. Click a group name to open it.</p>
+
+            <ul class="mt-5 space-y-3">
+                <li v-for="(g, gi) in groups" :key="g.name" class="rounded-lg ring-1 ring-line" :class="g.shown === 0 && 'bg-paper'">
+                    <div class="flex flex-wrap items-center gap-2 px-3 py-2">
+                        <button type="button" class="text-muted" :aria-expanded="open.has(g.name)" :aria-label="`Open ${g.name}`" @click="toggleOpen(g.name)">{{ open.has(g.name) ? '▾' : '▸' }}</button>
+                        <input :value="g.name" class="input w-auto min-w-48 flex-1 border-transparent py-1 font-semibold shadow-none hover:border-line" :aria-label="`Group name for ${g.name}`" @change="renameGroup(g, $event.target.value)" />
+                        <span class="text-xs text-muted">{{ g.shown }}/{{ g.items.length }} shown</span>
+                        <button type="button" class="btn-quiet px-2 py-1 text-xs" @click="setGroupVisible(g, g.shown === 0)">{{ g.shown === 0 ? 'Show group' : 'Hide group' }}</button>
+                        <button type="button" class="btn-quiet px-2 py-1 text-xs" :disabled="gi === 0" aria-label="Move group up" @click="moveGroup(g, 'up')">▲</button>
+                        <button type="button" class="btn-quiet px-2 py-1 text-xs" :disabled="gi === groups.length - 1" aria-label="Move group down" @click="moveGroup(g, 'down')">▼</button>
+                    </div>
+                    <ul v-if="open.has(g.name)" class="divide-y divide-line border-t border-line">
+                        <li v-for="f in g.items" :key="f.id" class="grid items-start gap-2 px-3 py-2 sm:grid-cols-[auto_1fr_1.3fr_auto]" :class="!f.is_visible && 'opacity-60'">
+                            <input type="checkbox" class="mt-2 rounded border-line" :checked="f.is_visible" :aria-label="`Show ${f.name}`" @change="patchFeature(f, { is_visible: $event.target.checked })" />
+                            <input :value="f.name" class="input py-1" aria-label="Feature" @change="patchFeature(f, { name: $event.target.value })" />
+                            <input :value="f.detail" class="input py-1" placeholder="Optional detail" aria-label="Detail" @change="patchFeature(f, { detail: $event.target.value })" />
+                            <button type="button" class="mt-1.5 text-xs text-red-700 hover:underline" @click="removeFeature(f)">Remove</button>
+                        </li>
+                    </ul>
+                </li>
+                <li v-if="!groups.length" class="rounded-lg bg-paper p-4 text-sm text-muted">No features yet. Add the first one below.</li>
+            </ul>
+
+            <form class="mt-5 grid gap-3 rounded-lg bg-paper p-4 sm:grid-cols-[1fr_1.4fr_1.4fr_auto] sm:items-end" @submit.prevent="addFeature">
+                <div>
+                    <label class="field-label" for="fg">Group</label>
+                    <input id="fg" v-model="newFeature.group_name" list="feature-groups" class="input" required />
+                    <datalist id="feature-groups"><option v-for="g in groups" :key="g.name" :value="g.name" /></datalist>
+                </div>
+                <div><label class="field-label" for="fn">Feature</label><input id="fn" v-model="newFeature.name" class="input" required /></div>
+                <div><label class="field-label" for="fd">Detail (optional)</label><input id="fd" v-model="newFeature.detail" class="input" /></div>
+                <button class="btn-primary" :disabled="newFeature.processing">Add feature</button>
+            </form>
+        </section>
 
         <!-- Screenshots -->
         <section v-if="p" class="mt-10 rounded-xl bg-white p-6 ring-1 ring-line">
