@@ -24,10 +24,5 @@
     "file": "05-owner-bookings.webp",
     "kind": "admin",
     "caption": "Owner app: bookings with payments and refunds"
-  },
-  {
-    "file": "06-preview.webp",
-    "kind": "admin",
-    "caption": "New sites start as AI-drafted previews in Launchpad"
   }
 ]
