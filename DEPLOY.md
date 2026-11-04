@@ -13,7 +13,7 @@ How this site is deployed and run. Reference when something breaks.
 ## Deploy flow
 1. Push to `main` → Coolify auto-builds and deploys.
 2. Front-end changes require `npm run build` committed first (no Vite on server).
-3. Migrations are manual: Coolify → app → Terminal → `php artisan migrate --force`.
+3. Migrations run on boot (`AUTORUN_ENABLED=true`); if a new table is missing, run `php artisan migrate --force` in the Coolify terminal.
 
 ## Environment variables (set in Coolify, not repo)
 Generated automatically at provision time: APP_KEY, APP_URL, DB_*, (AWS_* if MinIO).
