@@ -69,7 +69,6 @@ const approach = [
 <template>
     <Head>
         <title>{{ profile.name }}: full-stack and AI developer</title>
-        <meta name="description" :content="profile.intro" />
     </Head>
 
     <PublicLayout :profile="profile">

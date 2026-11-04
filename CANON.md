@@ -31,6 +31,17 @@ Inertia page path is `resources/js/Pages` (set in `config/inertia.php`; the pack
 - Only published projects appear; hidden ones return 404. Live-site links show only when allowed.
 - Bundled screenshots whose file is missing are skipped, never shown broken.
 
+### Link previews and search
+- Server-rendered tags (title, description, canonical, Open Graph, Twitter card) on `/` and every
+  project page, because preview bots (LinkedIn, WhatsApp, Slack, X, iMessage) don't run JavaScript.
+- Preview images: `public/images/og/<slug>.jpg` (1200x630, home + one per project), made by the
+  card generator script from the site fonts, colours and each project's cover screenshot. A project
+  without its own card falls back to the home card. The home card's headline is baked into the image:
+  regenerate it if the profile headline changes.
+- `og:url` and canonical never include `?via=upwork`, so shared links stay clean.
+- `/sitemap.xml` (home + published projects) and `/robots.txt` (blocks `/admin`, points to the sitemap);
+  admin pages also carry `noindex`. `apple-touch-icon.png` for phone home screens.
+
 ### Marketplace mode (Upwork / Fiverr)
 - `/?via=upwork` or `/?via=fiverr` puts that visitor's session in marketplace mode; `?via=direct` ends it.
 - In marketplace mode the server strips email, LinkedIn, GitHub, website and live-site links, the
@@ -111,3 +122,5 @@ websites; project client labels stay generic until a client agrees to be named.
 - 2026-11-04 — Emails tagged `[Portfolio]` with an `X-Source` header; sender "MCSP Portfolio".
 - 2026-11-04 — Launchpad hidden; its screenshot removed from the website platform project; missing
   bundled screenshots are skipped and cleaned up by migration. 42 tests passing.
+- 2026-11-04 — Link previews: server-side Open Graph/Twitter tags, designed 1200x630 cards for home
+  and each project, sitemap.xml, robots.txt, admin noindex, apple-touch-icon. 47 tests passing.

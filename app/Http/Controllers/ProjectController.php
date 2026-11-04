@@ -7,6 +7,7 @@ use App\Models\Project;
 use App\Models\Screenshot;
 use App\Models\Setting;
 use App\Models\Technology;
+use App\Support\Meta;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -22,8 +23,10 @@ class ProjectController extends Controller
         $index = $ordered->search(fn (Project $p) => $p->id === $project->id);
         $next = $ordered->get(($index + 1) % max($ordered->count(), 1));
 
+        $profile = Setting::publicValues(UpworkMode::active(request()));
+
         return Inertia::render('Project', [
-            'profile' => Setting::publicValues(UpworkMode::active(request())),
+            'profile' => $profile,
             'project' => [
                 ...$project->toCard(),
                 'clientLabel' => $project->client_label,
@@ -44,6 +47,6 @@ class ProjectController extends Controller
                 'screenshots' => $project->shownScreenshots()->map(fn (Screenshot $s) => $s->toPublic())->values(),
             ],
             'next' => $next && $next->id !== $project->id ? ['slug' => $next->slug, 'title' => $next->title] : null,
-        ]);
+        ])->withViewData(['meta' => Meta::project($project, $profile)]);
     }
 }

@@ -62,7 +62,6 @@ const meta = computed(() =>
 <template>
     <Head>
         <title>{{ project.title }}</title>
-        <meta name="description" :content="project.summary" />
     </Head>
 
     <PublicLayout :profile="profile">
