@@ -69,14 +69,14 @@ Inertia page path is `resources/js/Pages` (set in `config/inertia.php`; the pack
   password; rerun with the same email to reset it, a new email adds a second admin).
 
 ### Content loading
-- `PortfolioSeeder` creates the 12 projects, 68 technologies, profile defaults, bundled screenshots
+- `PortfolioSeeder` creates the 13 projects, 69 technologies, profile defaults, bundled screenshots
   (`public/images/projects/<slug>/shots.json`) and feature lists (`database/seeders/features/<slug>.json`).
 - Re-runnable and non-destructive: existing projects are never overwritten, features load only into
   projects that have none, headline numbers only when empty, and only new bundled screenshots are added.
 
 ## Current content (2026-11-04)
-- 12 projects; Launchpad hidden by choice (11 public). 84 screenshots, 865 features, 68 technologies.
-- Projects: PureOps, dermatology telehealth app, AskDoc, Launchpad (hidden), MCSP platform,
+- 13 projects; Launchpad hidden by choice (12 public). 87 screenshots, 892 features, 69 technologies.
+- Projects: PureOps, dermatology telehealth app, AskDoc RAG, AskDoc Lite, Launchpad (hidden), MCSP platform,
   small-business website platform, detailing booking site, dental clinic site, process-server site,
   PTA website, gym nutrition app, bank-statement bookkeeping tool.
 
@@ -98,6 +98,11 @@ websites; project client labels stay generic until a client agrees to be named.
   marketplace profile link instead (platform rules).
 - 2026-11-04 — Launchpad hidden so prospects don't read client sites as "made in five minutes";
   its Launchpad screenshot was also removed from the website platform project.
+- 2026-11-04 — AskDoc shown as two editions: **AskDoc Lite** (whole document + Claude citations, the
+  small-business offer, live demo at aidemo.mcspconsulting.com) and **AskDoc RAG** (its big brother for
+  large libraries). Lite's live link ships switched off until its deploy is smoke-tested. Hosting is
+  described as "its own server", never "your server": the default offer is a new server MCSP runs
+  and maintains, with the client's own server as an option.
 
 ## Known gotchas
 - Assets must be built locally and committed (`npm run build`); the server has no Vite.
@@ -127,3 +132,6 @@ websites; project client labels stay generic until a client agrees to be named.
   and each project, sitemap.xml, robots.txt, admin noindex, apple-touch-icon. 47 tests passing.
 - 2026-11-04 — Persistent volume `portfolio-uploads` added in Coolify at `storage/app/public`;
   a test file survived a redeploy into a new container.
+- 2026-11-04 — AskDoc Lite added (seeder entry, 27 features, 3 screenshots, preview card, new technology
+  "Claude citations & prompt caching"). Migration renames AskDoc to "AskDoc RAG" with big-brother
+  wording, only where the admin hasn't changed those fields. 49 tests passing.

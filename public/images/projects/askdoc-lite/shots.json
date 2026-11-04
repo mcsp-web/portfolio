@@ -1,0 +1,18 @@
+[
+  {
+    "file": "01-answers.webp",
+    "kind": "public",
+    "caption": "Answers quote the exact sentence they rely on, with its page",
+    "cover": true
+  },
+  {
+    "file": "02-not-found.webp",
+    "kind": "public",
+    "caption": "When the answer isn\u2019t in the document, it says so instead of guessing"
+  },
+  {
+    "file": "03-ready.webp",
+    "kind": "public",
+    "caption": "Upload a PDF, Word, text or Markdown file; the whole document is read for every question"
+  }
+]

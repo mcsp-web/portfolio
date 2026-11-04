@@ -1,0 +1,61 @@
+{
+ "stats": [
+  {"value": "~200", "label": "pages read per question"},
+  {"value": "0", "label": "search indexes or AI models to host"},
+  {"value": "4", "label": "document formats"}
+ ],
+ "groups": [
+  {
+   "name": "Ask your document",
+   "features": [
+    {"name": "Answers drawn only from the uploaded file", "detail": "If the answer is not in the document, it says so instead of guessing."},
+    {"name": "Reads the whole document for every question", "detail": "Summaries and questions that span several sections work, not only single facts."},
+    {"name": "Exact quoted sentence shown for each source"},
+    {"name": "Page or part number for every quote"},
+    {"name": "Duplicate quotes merged, up to six sources per answer"},
+    {"name": "Suggested starter questions"},
+    {"name": "Plain-text answers, no stray formatting"}
+   ]
+  },
+  {
+   "name": "Documents",
+   "features": [
+    {"name": "PDF, Word (.docx, including tables), text and Markdown"},
+    {"name": "Drag-and-drop or tap-to-choose upload"},
+    {"name": "Scanned PDFs without a text layer refused with a clear message"},
+    {"name": "Documents too long to read at once refused with a pointer to AskDoc RAG"},
+    {"name": "A failed upload never replaces the document already loaded"},
+    {"name": "20 MB upload limit"}
+   ]
+  },
+  {
+   "name": "AI under the hood",
+   "features": [
+    {"name": "Claude built-in citations", "detail": "Each page is sent as its own citable block, so every quote maps to a page."},
+    {"name": "Prompt caching", "detail": "Follow-up questions on the same document re-read it from cache at a fraction of the price."},
+    {"name": "Model chosen by setting, no code change"},
+    {"name": "Token use, including cache reads and writes, logged on the server and never sent to the browser"}
+   ]
+  },
+  {
+   "name": "Public demo safeguards",
+   "features": [
+    {"name": "Daily question cap for the whole demo"},
+    {"name": "Per-visitor limit over a short window"},
+    {"name": "Question length and answer length caps"},
+    {"name": "Friendly messages when the AI service is busy or not configured, never an error page"}
+   ]
+  },
+  {
+   "name": "Deployment and reliability",
+   "features": [
+    {"name": "Slim Docker image with no machine-learning libraries"},
+    {"name": "Built and tested in GitHub Actions, published to GitHub Container Registry"},
+    {"name": "Server pulls the finished image and never builds"},
+    {"name": "Health check endpoint that also reports which engine is running"},
+    {"name": "Shares upload code, interface and tests with AskDoc RAG"},
+    {"name": "Automated tests run the real Anthropic SDK against a fake API server"}
+   ]
+  }
+ ]
+}

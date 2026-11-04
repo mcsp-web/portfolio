@@ -2,7 +2,9 @@
 
 Derived from CANON.md. What's left, newest decisions first.
 
-## Now (James, in the admin)
+## Now (James)
+- [ ] Run the seeder once after this deploy to add AskDoc Lite: `php artisan db:seed --class=PortfolioSeeder --force` (Coolify terminal; existing projects untouched)
+- [ ] After AskDoc Lite is live and smoke-tested (aidemo repo OPEN-10/11): Admin → AskDoc Lite → tick "Link it publicly"
 - [ ] Bank-statement tool: remove "currency conversion" from its summary/highlights (not switched on in the tool)
 - [ ] Gmail filter so `[Portfolio]` enquiries land in Primary, not Updates (optional)
 - [ ] Add Fiverr profile URL in Admin → Profile if/when the Fiverr profile is live
@@ -10,7 +12,7 @@ Derived from CANON.md. What's left, newest decisions first.
 
 ## Next
 - [ ] Ask clients who agree to be named; update client labels and turn on their live links
-- [ ] Bring AskDoc back online on its own server and link it as a live demo
+- [ ] Bring AskDoc RAG back online on its own server/subdomain and link it as a live demo
 - [ ] Refresh screenshots as the apps change (Admin → project → Screenshots)
 
 ## Backlog
@@ -29,6 +31,7 @@ Derived from CANON.md. What's left, newest decisions first.
 - [x] Launchpad hidden; broken-screenshot guard and cleanup
 - [x] Link previews (Open Graph cards for home and each project), sitemap.xml, robots.txt
 - [x] Persistent volume `portfolio-uploads` mounted at `storage/app/public`; survival across redeploy verified
+- [x] AskDoc Lite project added; AskDoc renamed AskDoc RAG (big brother), guarded migration
 
 ## Pending manual steps
-- None. Migrations run on deploy; the seeder and admin account steps are done.
+- Seeder run for AskDoc Lite (see Now). Migrations run on deploy.
