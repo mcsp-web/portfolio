@@ -50,7 +50,6 @@ const submit = () => {
             <button type="submit" class="btn-primary mt-6 w-full" :disabled="form.processing">
                 {{ form.processing ? 'Signing in…' : 'Sign in' }}
             </button>
-            <p class="mt-4 text-xs text-muted">Forgot it? Reset it from the server with <code>php artisan portfolio:admin your@email.com</code>.</p>
         </form>
     </div>
 </template>
