@@ -135,3 +135,5 @@ websites; project client labels stay generic until a client agrees to be named.
 - 2026-11-04 — AskDoc Lite added (seeder entry, 27 features, 3 screenshots, preview card, new technology
   "Claude citations & prompt caching"). Migration renames AskDoc to "AskDoc RAG" with big-brother
   wording, only where the admin hasn't changed those fields. 49 tests passing.
+- 2026-11-04 — Admin menu stays on one line on phones (scrolls sideways if needed); the Messages
+  badge no longer pushes "Tech stack" onto two lines. Seeder run in production: AskDoc Lite live in the admin.
