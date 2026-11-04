@@ -55,3 +55,7 @@ are generic until a client agrees to be named.
   from each repo (built features only). Admin can hide/show/edit/remove a feature, hide/rename/reorder a
   group, or switch the whole list off. Seeder loads `database/seeders/features/<slug>.json` only into
   projects with no features yet, so re-running it never overwrites admin edits.
+- 2026-11-04 — Contact form on the home page (saved to `messages`, then emailed to the profile
+  contact email via Resend with reply-to set to the sender; honeypot; 3 per hour per IP). Hidden
+  and blocked server-side (404) for `?via=upwork` / `?via=fiverr` visitors. Admin → Messages with
+  unread badge. Upwork profile link filled in by migration when empty.

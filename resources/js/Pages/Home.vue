@@ -1,5 +1,5 @@
 <script setup>
-import { Head, Link, usePage } from '@inertiajs/vue3';
+import { Head, Link, useForm, usePage } from '@inertiajs/vue3';
 import { computed, ref } from 'vue';
 import PublicLayout from '../Layouts/PublicLayout.vue';
 import HeroStack from '../Components/HeroStack.vue';
@@ -10,7 +10,16 @@ const props = defineProps({
     projects: { type: Array, required: true },
     categories: { type: Array, required: true },
     stack: { type: Array, required: true },
+    contactOptions: { type: Object, required: true },
 });
+
+const contact = useForm({ name: '', email: '', company: '', project_type: '', budget: '', body: '', website: '' });
+const sent = computed(() => usePage().props.flash?.contactSent);
+const sendContact = () =>
+    contact.post(route('contact.store'), {
+        preserveScroll: true,
+        onSuccess: () => contact.reset(),
+    });
 
 const upworkMode = computed(() => usePage().props.upworkMode);
 const market = computed(() =>
@@ -196,14 +205,66 @@ const approach = [
                         <a v-if="market.url" :href="market.url" target="_blank" rel="noopener" class="display rounded-full bg-teal px-7 py-4 text-lg font-bold text-ink hover:bg-aqua">Message me on {{ market.name }}</a>
                     </div>
                 </template>
-                <template v-else>
-                    <p class="mt-5 max-w-xl text-lg text-muted">Fixed-price projects, ongoing contracts, or a second pair of hands on an existing Laravel, Vue or AI codebase. Replies within one business day.</p>
-                    <div class="mt-10 flex flex-wrap items-center gap-4">
-                        <a :href="`mailto:${profile.email}`" class="display rounded-full bg-teal px-7 py-4 text-lg font-bold break-all text-ink hover:bg-aqua">{{ profile.email }}</a>
-                        <a v-if="profile.upwork_url" :href="profile.upwork_url" target="_blank" rel="noopener" class="rounded-full px-6 py-4 font-semibold ring-1 ring-ink/20 hover:bg-paper">Hire me on Upwork</a>
-                        <a v-if="profile.linkedin_url" :href="profile.linkedin_url" target="_blank" rel="noopener" class="rounded-full px-6 py-4 font-semibold ring-1 ring-ink/20 hover:bg-paper">LinkedIn</a>
+                <div v-else class="mt-10 grid gap-12 lg:grid-cols-[1fr_1.3fr]">
+                    <div>
+                        <p class="max-w-md text-lg text-muted">Fixed-price projects, ongoing contracts, or a second pair of hands on an existing Laravel, Vue or AI codebase. Replies within one business day.</p>
+                        <p class="mt-8 text-sm text-muted">Prefer email?</p>
+                        <a :href="`mailto:${profile.email}`" class="display mt-1 inline-block text-xl font-bold break-all text-teal-ink underline decoration-teal/40 underline-offset-4 hover:decoration-teal">{{ profile.email }}</a>
+                        <div class="mt-8 flex flex-wrap gap-3">
+                            <a v-if="profile.upwork_url" :href="profile.upwork_url" target="_blank" rel="noopener" class="rounded-full px-5 py-2.5 text-sm font-semibold ring-1 ring-ink/20 hover:bg-paper">Hire me on Upwork</a>
+                            <a v-if="profile.linkedin_url" :href="profile.linkedin_url" target="_blank" rel="noopener" class="rounded-full px-5 py-2.5 text-sm font-semibold ring-1 ring-ink/20 hover:bg-paper">LinkedIn</a>
+                        </div>
                     </div>
-                </template>
+
+                    <div v-if="sent" role="status" class="rounded-2xl bg-paper p-8 ring-1 ring-line">
+                        <p class="display text-2xl font-bold">Message sent. Thank you.</p>
+                        <p class="mt-2 text-muted">I’ll reply to the email you gave within one business day.</p>
+                    </div>
+                    <form v-else class="grid gap-4 rounded-2xl bg-paper p-6 ring-1 ring-line sm:grid-cols-2 sm:p-8" novalidate @submit.prevent="sendContact">
+                        <div>
+                            <label class="field-label" for="c-name">Name</label>
+                            <input id="c-name" v-model="contact.name" class="input" autocomplete="name" required :aria-invalid="!!contact.errors.name" />
+                            <p v-if="contact.errors.name" class="mt-1 text-sm text-red-700">{{ contact.errors.name }}</p>
+                        </div>
+                        <div>
+                            <label class="field-label" for="c-email">Email</label>
+                            <input id="c-email" v-model="contact.email" type="email" class="input" autocomplete="email" required :aria-invalid="!!contact.errors.email" />
+                            <p v-if="contact.errors.email" class="mt-1 text-sm text-red-700">{{ contact.errors.email }}</p>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="field-label" for="c-company">Company <span class="font-normal text-muted">(optional)</span></label>
+                            <input id="c-company" v-model="contact.company" class="input" autocomplete="organization" />
+                        </div>
+                        <div>
+                            <label class="field-label" for="c-type">What do you need?</label>
+                            <select id="c-type" v-model="contact.project_type" class="input">
+                                <option value="">Choose one</option>
+                                <option v-for="(label, key) in contactOptions.projectTypes" :key="key" :value="key">{{ label }}</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="field-label" for="c-budget">Budget</label>
+                            <select id="c-budget" v-model="contact.budget" class="input">
+                                <option value="">Choose one</option>
+                                <option v-for="(label, key) in contactOptions.budgets" :key="key" :value="key">{{ label }}</option>
+                            </select>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="field-label" for="c-body">About the project</label>
+                            <textarea id="c-body" v-model="contact.body" rows="5" class="input" required placeholder="What you want built, who it’s for, and any deadline." :aria-invalid="!!contact.errors.body" />
+                            <p v-if="contact.errors.body" class="mt-1 text-sm text-red-700">{{ contact.errors.body }}</p>
+                        </div>
+                        <div class="hidden" aria-hidden="true">
+                            <label for="c-website">Leave this empty</label>
+                            <input id="c-website" v-model="contact.website" tabindex="-1" autocomplete="off" />
+                        </div>
+                        <div class="sm:col-span-2">
+                            <button type="submit" class="display rounded-full bg-teal px-7 py-3.5 text-lg font-bold text-ink hover:bg-aqua disabled:opacity-60" :disabled="contact.processing">
+                                {{ contact.processing ? 'Sending…' : 'Send message' }}
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
     </PublicLayout>
