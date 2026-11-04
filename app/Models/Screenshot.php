@@ -32,6 +32,14 @@ class Screenshot extends Model
     }
 
     /**
+     * A bundled image whose file was removed from the repo is skipped, never shown broken.
+     */
+    public function fileExists(): bool
+    {
+        return $this->disk !== 'bundled' || is_file(public_path('images/projects/'.$this->path));
+    }
+
+    /**
      * Bundled images ship in public/images; uploads live on a storage disk.
      */
     public function url(): string

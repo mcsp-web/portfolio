@@ -102,4 +102,13 @@ class PublicPortfolioTest extends TestCase
 
         $this->get('/?via=direct')->assertInertia(fn (Assert $page) => $page->where('profile.email', 'me@example.test'));
     }
+
+    public function test_bundled_screenshot_with_missing_file_is_skipped(): void
+    {
+        $p = $this->project();
+        $p->screenshots()->create(['disk' => 'bundled', 'path' => 'nowhere/missing.webp', 'is_cover' => true]);
+
+        $this->get('/work/demo-app')->assertInertia(fn (Assert $page) => $page->has('project.screenshots', 0));
+        $this->get('/')->assertInertia(fn (Assert $page) => $page->where('projects.0.cover', null)->where('projects.0.screenshotCount', 0));
+    }
 }

@@ -41,7 +41,7 @@ class ProjectController extends Controller
                     ])
                     ->filter(fn ($layer) => $layer['items']->isNotEmpty())
                     ->values(),
-                'screenshots' => $project->screenshots->map(fn (Screenshot $s) => $s->toPublic())->values(),
+                'screenshots' => $project->shownScreenshots()->map(fn (Screenshot $s) => $s->toPublic())->values(),
             ],
             'next' => $next && $next->id !== $project->id ? ['slug' => $next->slug, 'title' => $next->title] : null,
         ]);

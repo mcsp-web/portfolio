@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Collection;
 
 class Project extends Model
 {
@@ -61,6 +62,18 @@ class Project extends Model
         return $this->hasMany(Screenshot::class)->orderBy('sort_order')->orderBy('id');
     }
 
+    /**
+     * Screenshots that can actually be displayed (bundled files that still exist).
+     *
+     * @return Collection<int, Screenshot>
+     */
+    public function shownScreenshots(): Collection
+    {
+        $shots = $this->relationLoaded('screenshots') ? $this->screenshots : $this->screenshots()->get();
+
+        return $shots->filter(fn (Screenshot $s) => $s->fileExists())->values();
+    }
+
     public function features(): HasMany
     {
         return $this->hasMany(Feature::class)->orderBy('sort_order')->orderBy('id');
@@ -108,7 +121,7 @@ class Project extends Model
 
     public function cover(): ?Screenshot
     {
-        $shots = $this->relationLoaded('screenshots') ? $this->screenshots : $this->screenshots()->get();
+        $shots = $this->shownScreenshots();
 
         return $shots->firstWhere('is_cover', true) ?? $shots->first();
     }
@@ -133,7 +146,7 @@ class Project extends Model
             'isFeatured' => $this->is_featured,
             'cover' => $this->cover()?->toPublic(),
             'technologies' => $this->technologies->pluck('name')->all(),
-            'screenshotCount' => $this->screenshots->count(),
+            'screenshotCount' => $this->shownScreenshots()->count(),
             'featureCount' => $this->show_feature_list
                 ? ($this->relationLoaded('features') ? $this->features->where('is_visible', true)->count() : $this->features()->where('is_visible', true)->count())
                 : 0,
