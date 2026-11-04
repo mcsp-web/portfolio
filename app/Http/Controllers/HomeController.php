@@ -7,6 +7,7 @@ use App\Models\Message;
 use App\Models\Project;
 use App\Models\Setting;
 use App\Models\Technology;
+use App\Support\Meta;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -44,8 +45,10 @@ class HomeController extends Controller
             ->filter(fn (array $layer) => $layer['items']->isNotEmpty())
             ->values();
 
+        $profile = Setting::publicValues(UpworkMode::active(request()));
+
         return Inertia::render('Home', [
-            'profile' => Setting::publicValues(UpworkMode::active(request())),
+            'profile' => $profile,
             'projects' => $projects->map->toCard()->values(),
             'categories' => collect(Project::CATEGORIES)
                 ->filter(fn ($label, $key) => $projects->contains('category', $key))
@@ -56,6 +59,6 @@ class HomeController extends Controller
                 'projectTypes' => Message::PROJECT_TYPES,
                 'budgets' => Message::BUDGETS,
             ],
-        ]);
+        ])->withViewData(['meta' => Meta::home($profile)]);
     }
 }
