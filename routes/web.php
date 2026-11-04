@@ -11,7 +11,7 @@ Route::get('/work/{project:slug}', [ProjectController::class, 'show'])->name('pr
 
 Route::middleware('guest')->group(function () {
     Route::get('/admin/login', [LoginController::class, 'create'])->name('login');
-    Route::post('/admin/login', [LoginController::class, 'store'])->middleware('throttle:10,1')->name('login.store');
+    Route::post('/admin/login', [LoginController::class, 'store'])->name('login.store');
 });
 
 Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
