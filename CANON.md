@@ -46,3 +46,7 @@ are generic until a client agrees to be named.
 ## Session log
 - 2026-11-03 — Portfolio built from the site template: models, admin, public pages, 12 projects,
   sanitized screenshots, Upwork mode, 21 feature tests.
+- 2026-11-03 — Admin login fix: app now trusts the Coolify/Cloudflare proxy (`trustProxies(at: '*')`)
+  and forces https in production. Without it, login posts/redirects used http:// and errors never
+  showed. Login page always shows a reason (wrong password, lockout after 5 tries for 60s, expired
+  page, server unreachable).

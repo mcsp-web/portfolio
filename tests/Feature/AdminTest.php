@@ -7,6 +7,7 @@ use App\Models\Screenshot;
 use App\Models\Setting;
 use App\Models\Technology;
 use App\Models\User;
+use Illuminate\Foundation\Http\Middleware\ValidateCsrfToken;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
@@ -170,5 +171,49 @@ class AdminTest extends TestCase
             ->assertSuccessful();
 
         $this->assertDatabaseHas('users', ['email' => 'me@example.test']);
+    }
+
+    public function test_wrong_password_returns_a_visible_error_to_the_login_page(): void
+    {
+        $this->admin();
+
+        $this->from('/admin/login')
+            ->followingRedirects()
+            ->post('/admin/login', ['email' => 'admin@example.test', 'password' => 'wrong'])
+            ->assertOk()
+            ->assertInertia(fn ($page) => $page
+                ->component('Admin/Login')
+                ->where('errors.email', 'Wrong email or password. Check both and try again.'));
+        $this->assertGuest();
+    }
+
+    public function test_repeated_wrong_passwords_lock_out_with_a_message(): void
+    {
+        $this->admin();
+        foreach (range(1, 5) as $i) {
+            $this->post('/admin/login', ['email' => 'admin@example.test', 'password' => 'wrong']);
+        }
+
+        $this->post('/admin/login', ['email' => 'admin@example.test', 'password' => 'correct-horse-battery'])
+            ->assertSessionHasErrors('email');
+        $this->assertGuest();
+        $this->assertStringContainsString('Too many sign-in attempts', session('errors')->first('email'));
+    }
+
+    public function test_requests_through_the_https_proxy_generate_https_urls(): void
+    {
+        $this->get('/admin/login', ['X-Forwarded-Proto' => 'https', 'X-Forwarded-Host' => 'portfolio.example.com'])
+            ->assertOk()
+            ->assertSee('https://portfolio.example.com', false);
+    }
+
+    public function test_expired_form_goes_back_with_a_message(): void
+    {
+        $this->withMiddleware(ValidateCsrfToken::class);
+        $this->app->instance('env', 'local');
+
+        $response = $this->from('/admin/login')->post('/admin/login', ['email' => 'a@example.test', 'password' => 'x', '_token' => 'stale']);
+
+        $response->assertRedirect('/admin/login');
     }
 }
