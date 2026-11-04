@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Middleware\UpworkMode;
+use App\Models\Message;
 use App\Models\Project;
 use App\Models\Setting;
 use App\Models\Technology;
@@ -51,6 +52,10 @@ class HomeController extends Controller
                 ->map(fn ($label, $key) => ['key' => $key, 'label' => $label])
                 ->values(),
             'stack' => $layers,
+            'contactOptions' => [
+                'projectTypes' => Message::PROJECT_TYPES,
+                'budgets' => Message::BUDGETS,
+            ],
         ]);
     }
 }

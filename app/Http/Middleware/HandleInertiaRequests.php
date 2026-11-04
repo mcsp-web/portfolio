@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Message;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
@@ -24,7 +25,11 @@ class HandleInertiaRequests extends Middleware
             'auth' => ['user' => $request->user()?->only(['name', 'email'])],
             'upworkMode' => fn () => UpworkMode::active($request),
             'marketplace' => fn () => UpworkMode::marketplace($request),
-            'flash' => ['success' => fn () => $request->session()->get('success')],
+            'flash' => [
+                'success' => fn () => $request->session()->get('success'),
+                'contactSent' => fn () => (bool) $request->session()->get('contact_sent'),
+            ],
+            'unreadMessages' => fn () => $request->user() ? Message::whereNull('read_at')->count() : 0,
         ];
     }
 }

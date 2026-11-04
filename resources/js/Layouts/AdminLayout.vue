@@ -12,6 +12,7 @@ watch(() => page.props.flash?.success, (m) => {
 
 const nav = [
     ['admin.projects.index', 'Projects', 'admin.projects.*'],
+    ['admin.messages.index', 'Messages', 'admin.messages.*'],
     ['admin.technologies.index', 'Tech stack', 'admin.technologies.*'],
     ['admin.settings.edit', 'Profile', 'admin.settings.*'],
 ];
@@ -25,7 +26,7 @@ const user = computed(() => page.props.auth?.user);
                 <span class="display font-bold">Portfolio admin</span>
                 <nav class="flex gap-1 text-sm" aria-label="Admin">
                     <Link v-for="[name, label, match] in nav" :key="name" :href="route(name)"
-                          class="rounded-md px-3 py-1.5" :class="route().current(match) ? 'bg-white/15 font-semibold' : 'text-white/75 hover:text-white'">{{ label }}</Link>
+                          class="rounded-md px-3 py-1.5" :class="route().current(match) ? 'bg-white/15 font-semibold' : 'text-white/75 hover:text-white'">{{ label }}<span v-if="name === 'admin.messages.index' && page.props.unreadMessages" class="ml-1.5 rounded-full bg-teal px-1.5 text-xs font-bold text-ink">{{ page.props.unreadMessages }}</span></Link>
                 </nav>
                 <div class="ml-auto flex items-center gap-4 text-sm">
                     <a :href="route('home')" target="_blank" class="text-white/75 hover:text-white">View site</a>

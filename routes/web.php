@@ -2,11 +2,13 @@
 
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 Route::get('/work/{project:slug}', [ProjectController::class, 'show'])->name('projects.show');
 
 Route::middleware('guest')->group(function () {
@@ -36,6 +38,10 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::patch('/projects/{project:id}/feature-groups/move', [Admin\FeatureController::class, 'moveGroup'])->name('features.moveGroup');
     Route::patch('/features/{feature}', [Admin\FeatureController::class, 'update'])->name('features.update');
     Route::delete('/features/{feature}', [Admin\FeatureController::class, 'destroy'])->name('features.destroy');
+
+    Route::get('/messages', [Admin\MessageController::class, 'index'])->name('messages.index');
+    Route::patch('/messages/{message}/read', [Admin\MessageController::class, 'toggleRead'])->name('messages.read');
+    Route::delete('/messages/{message}', [Admin\MessageController::class, 'destroy'])->name('messages.destroy');
 
     Route::get('/stack', [Admin\TechnologyController::class, 'index'])->name('technologies.index');
     Route::post('/stack', [Admin\TechnologyController::class, 'store'])->name('technologies.store');
