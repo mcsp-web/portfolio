@@ -24,9 +24,9 @@ const user = computed(() => page.props.auth?.user);
         <header class="bg-ink text-white">
             <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-8 gap-y-2 px-5 py-3">
                 <span class="display font-bold">Portfolio admin</span>
-                <nav class="flex gap-1 text-sm" aria-label="Admin">
+                <nav class="-mx-1 flex w-full gap-1 overflow-x-auto px-1 text-sm sm:w-auto" aria-label="Admin">
                     <Link v-for="[name, label, match] in nav" :key="name" :href="route(name)"
-                          class="rounded-md px-3 py-1.5" :class="route().current(match) ? 'bg-white/15 font-semibold' : 'text-white/75 hover:text-white'">{{ label }}<span v-if="name === 'admin.messages.index' && page.props.unreadMessages" class="ml-1.5 rounded-full bg-teal px-1.5 text-xs font-bold text-ink">{{ page.props.unreadMessages }}</span></Link>
+                          class="inline-flex shrink-0 items-center whitespace-nowrap rounded-md px-3 py-1.5" :class="route().current(match) ? 'bg-white/15 font-semibold' : 'text-white/75 hover:text-white'">{{ label }}<span v-if="name === 'admin.messages.index' && page.props.unreadMessages" class="ml-1.5 rounded-full bg-teal px-1.5 text-xs font-bold text-ink">{{ page.props.unreadMessages }}</span></Link>
                 </nav>
                 <div class="ml-auto flex items-center gap-4 text-sm">
                     <a :href="route('home')" target="_blank" class="text-white/75 hover:text-white">View site</a>
