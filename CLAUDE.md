@@ -14,9 +14,9 @@ Read this file first, every session. It defines how we build and ship here.
    The production server has NO Vite/npm. It serves what's committed.
    → Run `npm run build`, then commit the `public/build/` output. Never skip this.
 2. **`public/build/` MUST be committed.** If `.gitignore` ignores it, remove that line.
-3. **Migrations are MANUAL on production.** Never assume auto-migrate on deploy.
-   Write migrations, but run them via the Coolify container terminal:
-   `php artisan migrate --force`. Note any pending migration in ROADMAP.md.
+3. **Check migrations after a deploy.** The image runs them on boot (`AUTORUN_ENABLED=true` in the
+   Dockerfile) unless that is turned off in Coolify. Confirm new tables exist; if they are missing, run
+   `php artisan migrate --force` in the Coolify container terminal. Seeding is never automatic.
 4. **Secrets live in Coolify env vars, never in the repo.** `.env` is git-ignored.
    `.env.example` is the source of truth for what keys exist.
 5. **Ask before adding heavy dependencies** (queues/Horizon/Reverb/websockets).
