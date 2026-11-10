@@ -3,7 +3,7 @@
 How this site is deployed and run. Reference when something breaks.
 
 ## Infrastructure
-- **Host:** Coolify on our VPS (IP 87.99.142.195)
+- **Host:** Coolify on our VPS (address in the Coolify and Hetzner consoles)
 - **Coolify project:** [name/uuid]
 - **App:** built from this repo's Dockerfile (serversideup/php:8.4-fpm-nginx, port 8080)
 - **Database:** shared Postgres server → database `[db_name]`, user `[db_user]`
