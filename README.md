@@ -1,58 +1,57 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Portfolio: James McCalla / MCSP Consulting
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+The site behind https://portfolio.mcspconsulting.com: a public portfolio of projects with screenshots, feature lists and tech stacks, plus a small admin for editing all of it.
 
-## About Laravel
+| Home | Project page |
+|---|---|
+| ![Home page](docs/screenshots/01-home.webp) | ![Project page](docs/screenshots/02-project.webp) |
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+| Admin: projects (order, show/hide, featured) | Admin: edit a project |
+|---|---|
+| ![Admin project list](docs/screenshots/03-admin-projects.webp) | ![Admin project editor](docs/screenshots/04-admin-edit.webp) |
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<img src="docs/screenshots/05-home-mobile.webp" alt="Home page on a phone" width="260">
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Stack
 
-## Learning Laravel
+Laravel 13 · Inertia.js · Vue 3 (Composition API, `<script setup>`) · Tailwind CSS · Vite · Ziggy · PostgreSQL (SQLite works locally)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## What's in it
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**Public site** (`resources/js/Pages/Home.vue`, `Project.vue`)
+- Project grid with filters by category, a featured row, and per-project pages
+- Screenshot galleries with desktop and phone frames (`Components/DeviceShot.vue`, `HeroStack.vue`)
+- Feature lists grouped by area, tech-stack chips, contact form with honeypot and email notification
+- Link previews (Open Graph images per project), `sitemap.xml` and `robots.txt`
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+**Admin** (`resources/js/Pages/Admin/`)
+- Projects: create, edit, delete, show/hide, feature, reorder
+- Screenshots: upload, caption, reorder, delete
+- Feature lists: add, edit, group, reorder groups
+- Tech stack and profile editing; contact messages inbox with read/unread
+- Forms show server validation inline with `aria-invalid`, and network failures get a plain-language message
 
-## Agentic Development
+## Tests
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+49 PHPUnit feature tests (308 assertions) covering the public pages, the admin (auth required for every route, CRUD, ordering), contact handling (including when email delivery fails), feature lists and link previews.
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+composer install && npm install
+cp .env.example .env && php artisan key:generate
+php artisan test
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+## Run locally
 
-## Contributing
+```bash
+touch database/database.sqlite   # set DB_CONNECTION=sqlite and DB_DATABASE to that path in .env
+php artisan migrate --seed       # seeds all projects from public/images/projects/*/shots.json
+php artisan portfolio:admin you@example.com   # create an admin login
+composer run dev
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Deploy
 
-## Code of Conduct
+Docker image (serversideup/php) built by Coolify from this repo; built front-end assets are committed in `public/build/` because the server has no Node. Uploads live on a persistent volume. See `DEPLOY.md`.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Built by James McCalla ([MCSP Consulting](https://mcspconsulting.com)).
