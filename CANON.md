@@ -137,3 +137,6 @@ websites; project client labels stay generic until a client agrees to be named.
   wording, only where the admin hasn't changed those fields. 49 tests passing.
 - 2026-11-04 — Admin menu stays on one line on phones (scrolls sideways if needed); the Messages
   badge no longer pushes "Tech stack" onto two lines. Seeder run in production: AskDoc Lite live in the admin.
+- 2026-11-10 — README rewritten as a public showcase with five screenshots in `docs/screenshots/`
+  (taken from a local SQLite copy with seeded data), so the repo can be made public for job
+  applications. Docs only. 49 tests passing; gitleaks scan of the full history clean.
